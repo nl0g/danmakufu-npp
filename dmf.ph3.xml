@@ -1,0 +1,4880 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+	AutoComplite config for Notepad++.
+	Contains descriptions of functions and constants used by Danmakufu script engine (version ph3).
+	Descriptions are taken from wiki: http://dmf.shrinemaiden.org/wiki/Main_Page
+	and from official documentation: http://www.geocities.co.jp/SiliconValley-Oakland/9951/pre/th_dnh_help_v3.html
+	Unsorted - DOES NOT WORK in Notepad++ as is.
+-->
+<NotepadPlus>
+	<AutoComplete language="Danmakufu.ph3">
+		<Environment ignoreCase="yes" startFunc="(" stopFunc=")" paramSeparator="," additionalWordChar="."/>
+		<KeyWord func="yes" name="add">
+			<Overload descr="Returns the sum of two values." retVal="real">
+				<Param name="real value1"/>
+				<Param name="real value2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="subtract">
+			<Overload descr="Returns the difference of two values." retVal="real">
+				<Param name="real value1"/>
+				<Param name="real value2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="multiply">
+			<Overload descr="Returns the product of two values." retVal="real">
+				<Param name="real value1"/>
+				<Param name="real value2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="divide">
+			<Overload descr="Returns the quotient of two values." retVal="real">
+				<Param name="real value1"/>
+				<Param name="real value2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="remainder">
+			<Overload descr="Returns the modulo operation (the remainder of a quotient) of two values.
+			Note: remainder or % will always return a value with the same sign as the divisor.
+			For example, -7 % 4 equals 1 and 7 % -4 equals -1." retVal="real">
+				<Param name="real dividend"/>
+				<Param name="real divisor"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="power">
+			<Overload descr="Returns the product of a base number and exponent. ^ can also be used." retVal="real">
+				<Param name="real base"/>
+				<Param name="real exponent"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="min">
+			<Overload descr="Returns the lesser of the two values." retVal="real">
+				<Param name="real value1"/>
+				<Param name="real value2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="max">
+			<Overload descr="Returns the greater of the two values." retVal="real">
+				<Param name="real value1"/>
+				<Param name="real value2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="log">
+			<Overload descr="Returns the natural (base e) logarithmof the value." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="log10">
+			<Overload descr="Returns the common (base 10) logarithmof the value." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="cos">
+			<Overload descr="Returns the cosine of the angle.
+			Cosine is a value between -1 and 1 that corresponds to the x-value in a coordinate plane." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="sin">
+			<Overload descr="Returns the sine of the angle.
+			Sine is a value between -1 and 1 that corresponds to the y-value in a coordinate plane." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="tan">
+			<Overload descr="Returns the tangent of the angle.
+			Tangent is the slope of the line created by the angle (x/y)." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="acos">
+			<Overload descr="Returns the arccosine of the angle. acos(cos(x)) = x, if x is between 0 and 180." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="asin">
+			<Overload descr="Returns the arcsine of the value. asin(sin(x)) = x, if x is between -90 and 90." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="atan">
+			<Overload descr="Returns the arctangent of the value. atan(tan(x)) = x, if x is between -90 and 90." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="atan2">
+			<Overload descr="Returns the arctangent of y/x, which is the angle from (0, 0) to (x, y).
+			The angle will be in the range -180 &amp;lt; a &amp;lt;= 180, where a is the returned value.
+			Useful for getting the angle from one point to another point.
+			For example, the angle from the boss to the player is atan2(player y - boss y, player x - boss x)." retVal="real">
+				<Param name="real y"/>
+				<Param name="real x"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="rand">
+			<Overload descr="Returns a random value between the two values.
+			Note that the random value is not an integer;
+			if you need one, use either round(), ceil(), or floor() on the returned value." retVal="real">
+				<Param name="real minimumValue"/>
+				<Param name="real maximumValue"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="round">
+			<Overload descr="Returns the value as an integer.
+			Values of 0.5 or greater are rounded up; otherwise they are rounded down." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="truncate">
+			<Overload descr="Returns the value with no decimal places. For instance, 1.123 becomes 1.
+			The shortened name trunc can also be used to refer to this function." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ceil">
+			<Overload descr="Returns the value rounded up to the next integer." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="floor">
+			<Overload descr="Returns the value rounded down to the next integer." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="absolute">
+			<Overload descr="Returns the value as an absolute number (if it is negative, it will be changed to a positive)." retVal="real">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="modc">
+			<Overload descr="Returns a modulus of the first value.
+			Modulus provides the remainder of the division (7 modulo 5 would be 2).
+			Note: unlike remainder, modc returns a value with the same sign as the dividend:
+			modc(-7, 4) equals -3 and modc(7, -4) equals 3." retVal="real">
+				<Param name="real value1"/>
+				<Param name="real value2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="InstallFont">
+			<Overload descr="Loads the given font, which can be used with ObjText_SetFontType,
+			allowing for usage of fonts that are not standard to Windows.
+			Returns true if successful.
+			Note, anything other than a Shift-JIS font will not be displayed properly
+			if Danmakufu is run with AppLocale (before ph3 [.1 pre2])." retVal="boolean">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ToString">
+			<Overload descr="Returns the value as a string, able to be used by text functions.
+			(Text functions cannot normally read numbers.)" retVal="string">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="IntToString">
+			<Overload descr="Returns the value as a string, omits any decimal places." retVal="string">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="itoa">
+			<Overload descr="Converts an integer value to an array form, but leaves out decimal places." retVal="string">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="rtoa">
+			<Overload descr="Converts any real number to an array format." retVal="string">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="rtos">
+			<Overload descr="Returns the value as a string, with some filtering options.
+			The format is presented as a string that determines how many digits will be shown;
+			it can contain any combination of the following three characters:
+			&quot;0&quot;, &quot;.&quot;, &quot;#&quot;. &quot;0&quot; is a slot for a digit.
+			&quot;.&quot; represents the decimal place in the string.
+			&quot;#&quot; creates a space in the string.
+			For example, rtos(&quot;000.000&quot;, 1.23) = &quot;001.230&quot;, and rtos(&quot;#00&quot;, 1.23) = &quot; 01&quot;." retVal="string">
+				<Param name="string format"/>
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="vtos">
+			<Overload descr="Returns the value as a string, with some more filtering options.
+			First, the number of digits on each side of the decimal are specified (000.00 is 3.2 in the format string).
+			Unused digits will be filled with spaces.
+			If preceded by a &quot;-&quot;, the digits will be right-justified,
+			adding blank spaces to the right instead of the left.
+			If preceded by a &quot;0&quot;, all digits not occupied by the value will be filled by zeroes.
+			If ended with a &quot;d&quot;, the value will be presented as an integer.
+			If ended with an &quot;f&quot;, the value will be presented as a real number.
+			If ended with an &quot;s&quot;, this indicates the value given was in the form of a string.
+			For example, vtos(&quot;03d&quot;, 1.23) = &quot;001&quot;,
+			vtos(&quot;3d&quot;, 1.23) = &quot; 1&quot;,
+			vtos(&quot;-3d&quot;, 1.23) = &quot;1 ;&quot;,
+			vtos(&quot;03.5f&quot;, 1.23) = &quot;001.23000&quot;" retVal="string">
+				<Param name="string format"/>
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="atoi">
+			<Overload descr="Takes the contents of an array and converts it into an integer." retVal="real">
+				<Param name="string value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ator">
+			<Overload descr="Takes the contents of an array and converts it into a real number." retVal="real">
+				<Param name="string value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="TrimString">
+			<Overload descr="Returns the string with spaces removed from the beginning and ending of the text.
+			For example, TrimString(&quot; ABC &quot;) will return &quot;ABC&quot;." retVal="string">
+				<Param name="string s"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SplitString">
+			<Overload descr="Returns an array containing the split strings.
+			For example, SplitString(&quot;A/123/BCD&quot;, &quot;/&quot;) will return [&quot;A&quot;, &quot;123&quot;, &quot;BCD&quot;]." retVal="string[]">
+				<Param name="string s"/>
+				<Param name="string delimiter"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetFileDirectory">
+			<Overload descr="Returns the directory of the specified file path.
+			Specifically, returns the input string up to the rightmost forward slash, with backslashes removed." retVal="string">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetFilePathList">
+			<Overload descr="Returns a list of files in the folder of the specified file path (or folder path)." retVal="string">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetDirectoryList">
+			<Overload descr="Returns an array of the directories available within the directory of the specified path." retVal="string[]">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetModuleDirectory">
+			<Overload descr="Returns the directory containing the running th_dnh.exe file." retVal="string"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetMainStgScriptPath">
+			<Overload descr="Returns the path of the current stage of the script running." retVal="string"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetMainPackageScriptPath">
+			<Overload descr="Returns the directory of the currently running package script." retVal="string"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetMainStgScriptDirectory">
+			<Overload descr="Returns the directory of the current stage of the script running." retVal="string"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCurrentScriptDirectory">
+			<Overload descr="Returns the directory of the file in which this function was called." retVal="string"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetScriptPathList">
+			<Overload descr="Returns an array of available (selectable at selection screen) scripts of the specified type
+			within the directory of the specified path." retVal="string[]">
+				<Param name="string path"/>
+				<Param name="const type"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCurrentDateTimeS">
+			<Overload descr="Returns a string containing the current date and time.
+			For example, if the current date is 2012/09/16 12:34:56, then &quot;20120916123456&quot;
+			will be returned.If you wanted to convert it to a number,
+			you may use the atoifunction; for example, let year = atoi(GetCurrentDateTimeS[0..4]);" retVal="string"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetStageTime">
+			<Overload descr="Returns a number with the amount of time that has been elapsed
+			since the start of the main script.
+			The value is in milliseconds." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPackageTime">
+			<Overload descr="Returns a number with the amount of time that has been elapsed
+			since the start of the package script.
+			The value is in milliseconds." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCurrentFps">
+			<Overload descr="Returns the current FPS." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetReplayFps">
+			<Overload descr="Returns the FPS of the replay at the current time.
+			Note that this value refreshes as a much slower rate than GetCurrentFps." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="WriteLog">
+			<Overload descr="Outputs the given string to log." retVal="void">
+				<Param name="string msg"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="RaiseError">
+			<Overload descr="Creates an error box with the specified string.
+			Execution of the script is stopped, closing the script." retVal="void">
+				<Param name="string msg"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCommonData">
+			<Overload descr="Maps the given key to the given value in common data.
+			Uses the default common data area.
+			The value can be returned by using GetCommonData with the corresponding key." retVal="void">
+				<Param name="string key"/>
+				<Param name="free value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCommonData">
+			<Overload descr="Returns the value associated with the given key in common data.
+			Returns the default value if no value had been stored to it previously." retVal="free">
+				<Param name="string key"/>
+				<Param name="free default"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ClearCommonData">
+			<Overload descr="Removes all of the common data in the default common data area." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="DeleteCommonData">
+			<Overload descr="Removes the common data mapping with the specified key." retVal="void">
+				<Param name="string key"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetAreaCommonData">
+			<Overload descr="Maps the given key to the given value in the specified area in common data.
+			The value can be returned by using GetAreaCommonData with the corresponding area and key." retVal="void">
+				<Param name="string commonData"/>
+				<Param name="string key"/>
+				<Param name="free value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetAreaCommonData">
+			<Overload descr="Returns the value associated with the given key in the specified area in common data.
+			Returns the default value if no value had been stored to it previously." retVal="free">
+				<Param name="string commonData"/>
+				<Param name="string key"/>
+				<Param name="free default"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ClearAreaCommonData">
+			<Overload descr="Removes all of the common data in the specified area." retVal="void">
+				<Param name="string commonData"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="DeleteAreaCommonData">
+			<Overload descr="Removes the common data mapping with the specified key in the specified area." retVal="void">
+				<Param name="string commonData"/>
+				<Param name="string key"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateCommonDataArea">
+			<Overload descr="Creates a common data area to organize common data together.
+			A common data area &quot;&quot; (empty string) has been created by default,
+			which is also used by the SetCommonData series." retVal="void">
+				<Param name="string commonDataAreaName"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="IsCommonDataAreaExists">
+			<Overload descr="Returns whether the specified common data area exists." retVal="boolean">
+				<Param name="string commonData"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CopyCommonDataArea">
+			<Overload descr="Copies the common data in the source area to the destination area.
+			If the source common data area is invalid, nothing will happen." retVal="void">
+				<Param name="string destinationCommonData"/>
+				<Param name="string sourceCommonData"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCommonDataAreaKeyList">
+			<Overload descr="Returns an array of all common data area names." retVal="string[]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCommonDataValueKeyList">
+			<Overload descr="Returns an array of the keys in the specified area." retVal="string[]">
+				<Param name="string commonData"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SaveCommonDataAreaA1">
+			<Overload descr="Saves everything in the specified common data area to a data file.
+			Returns true if successful and false if the operation failed." retVal="boolean">
+				<Param name="string commonData"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadCommonDataAreaA1">
+			<Overload descr="Loads everything in the specified common data area from the saved data file.
+			Returns true if successful and false if the operation failed." retVal="boolean">
+				<Param name="string commonData"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SaveCommonDataAreaA2">
+			<Overload descr="Saves everything in the specified common data area to a data file at the specified path.
+			Returns true if successful and false if the operation failed." retVal="boolean">
+				<Param name="string commonData"/>
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadCommonDataAreaA2">
+			<Overload descr="Loads everything in the specified common data area from the saved data file at the specified path.
+			Returns true if successful and false if the operation failed." retVal="boolean">
+				<Param name="string commonData"/>
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SaveCommonDataAreaToReplayFile">
+			<Overload descr="Saves the specified common data area to the replay file.
+			Returns true if successful and false if the operation failed.
+			If this function is called during a replay, Danmakufu will present an error." retVal="boolean">
+				<Param name="string commonData"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadCommonDataAreaFromReplayFile">
+			<Overload descr="Loads the specified common data area from the replay file.
+			Returns true if successful and false if the operation failed.
+			If this function is called during gameplay, Danmakufu will present an error." retVal="boolean">
+				<Param name="string commonData"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadSound">
+			<Overload descr="Loads specified sound file." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="RemoveSound">
+			<Overload descr="Removes specified sound file." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="PlayBGM">
+			<Overload descr="Plays the specified sound file as a looping BGM.
+			You can be more precise by using decimals
+			(for instance, if you want to loop from 2.5 seconds on, you can type 2.5)." retVal="void">
+				<Param name="string path"/>
+				<Param name="real loopStartSecond"/>
+				<Param name="real loopEndSecond"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="PlaySE">
+			<Overload descr="Plays specified sound file as a sound effect." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="StopSound">
+			<Overload descr="Stops specified sound file." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetVirtualKeyState">
+			<Overload descr="Returns the state of the specified virtual key." retVal="const">
+				<Param name="const virtualKey"/>
+				<Param name="const keyState"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetVirtualKeyState">
+			<Overload descr="Sets the given virtual key to the given state.
+			The virtual key will be restored to its true state a frame after you stop calling this function.
+			Keep in mind that if you set it to KEY_HOLD it will not go to KEY_PULL or KEY_PUSH." retVal="void">
+				<Param name="const keyName"/>
+				<Param name="const keyState"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="AddVirtualKey">
+			<Overload descr="Registers the given virtual key with the given key.
+			You may map any number of virtual keys to a single key, 
+			but virtual keys may only be mapped to a single key.
+			For an example, if you were to use AddVirtualKey(VK_SHOT, KEY_UP, KEY_INVALID);,
+			whenever you press the up arrow key, the virtual shot key will be pressed.
+			Take note that you will not be able to move up.
+			To fix this, you add AddVirtualKey(VK_UP, KEY_UP, KEY_INVALID);.
+			You will now shoot and move up at the same time.
+			However, if you were to add AddVirtualKey(VK_UP, KEY_LEFT, KEY_INVALID);
+			with the above two examples, you will not move up when you press up,
+			because VK_UP has been remapped to KEY_LEFT." retVal="void">
+				<Param name="const virtualKeyName"/>
+				<Param name="const keyName"/>
+				<Param name="const padKey"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="AddReplayTargetVirtualKey">
+			<Overload descr="Registers the given key id to the replay file.
+			This key id should be one that you have already registered with AddVirtualKey." retVal="void">
+				<Param name="const keyName"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetKeyState">
+			<Overload descr="Returns the given key id's current state." retVal="const">
+				<Param name="const keyName"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetMouseState">
+			<Overload descr="Returns the given mouse button's current state." retVal="const">
+				<Param name="const mouseButton"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetMouseX">
+			<Overload descr="Returns the mouse's X coordinate.
+			The origin for the mouse coordinates is the upper left of the Danmakufu window (0, 0).
+			Mouse coordinates will be properly adjusted according to the resizing of Danmakufu's window." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetMouseY">
+			<Overload descr="Returns the mouse's Y coordinate.
+			The origin for the mouse coordinates is the upper left of the Danmakufu window (0, 0).
+			Mouse coordinates will be properly adjusted according to the resizing of Danmakufu's window." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetMouseMoveZ">
+			<Overload descr="Returns the amount of change that has occurred to the mouse's Z axis.
+			The Z axis is normally the middle mouse wheel.
+			If there is no mouse wheel, the value will be 0.
+			The value returned will be negative if the wheel was moved back,
+			and positive if the wheel moved forward." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="SetSkipModeKey">
+			<Overload descr="Specifies the key to use for fast playback mode.
+			The default key is KEY_LCONTROL.
+			Specify KEY_INVALID if you do not wish to enable fast playback." retVal="void">
+				<Param name="const keyName"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadTexture">
+			<Overload descr="Loads specified image file as a texture." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadTextureInLoadThread">
+			<Overload descr="Loads specified image file as a texture in a separate thread.
+			Using this function inside @Loading is the same as using LoadTexture.
+			When using large images, the script will freeze until the image has finished loading." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="RemoveTexture">
+			<Overload descr="Removes specified texture file." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetTextureWidth">
+			<Overload descr="Returns the width (real) of the specified image file." retVal="real">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetTextureHeight">
+			<Overload descr="Returns the height (real) of the specified image file." retVal="real">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetFogEnable">
+			<Overload descr="Enables or disables fog." retVal="void">
+				<Param name="boolean fogEnabled"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetFogParam">
+			<Overload descr="Sets the fog parameters.
+			Starting and ending points are distances from player.
+			To turn the screen dark around the player, you can use SetFogParam(250, 700, 0, 0, 0)." retVal="void">
+				<Param name="real startingPoint"/>
+				<Param name="real endingPoint"/>
+				<Param name="real colorRed"/>
+				<Param name="real colorGreen"/>
+				<Param name="real colorBlue"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ClearInvalidRenderPriority">
+			<Overload descr="Clears invalid render priority. (unsure)" retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="SetInvalidRenderPriorityA1">
+			<Overload descr="Sets invalid render priority. 
+			Drawing within the specified range is disabled by this function." retVal="void">
+				<Param name="real startInvalidRenderPriority"/>
+				<Param name="real endInvalidRenderPriority"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetReservedRenderTargetName">
+			<Overload descr="Acquires the render target name reserved at Danmakufu's startup. (unsure)
+			The texture acquired by this function necessarily exists." retVal="void">
+				<Param name="real index"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateRenderTarget">
+			<Overload descr="Can create a custom render target outside of the reserved ones.
+			To use, ObjPrim_SetTexturemust have the name of the render target as a string.
+			Example:
+			CreateRenderTarget(&quot;My Render Target&quot;);
+			ObjPrim_SetTexture(objname,&quot;My Render Target&quot;);" retVal="void">
+				<Param name="string targetName"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="RenderToTextureA1">
+			<Overload descr="Renders the specified range of invalid render priority drawings to a texture." retVal="void">
+				<Param name="string targetName"/>
+				<Param name="real startInvalidRenderPriority"/>
+				<Param name="real endInvalidRenderPriority"/>
+				<Param name="boolean clearRenderTarget"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="RenderToTextureB1">
+			<Overload descr="Renders the specified object to texture." retVal="void">
+				<Param name="string targetName"/>
+				<Param name="real objectId"/>
+				<Param name="boolean clearRenderTarget"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SaveRenderedTextureA1">
+			<Overload descr="Saves rendered texture to file.
+			The image file created by this function can be used immediately after its execution." retVal="void">
+				<Param name="string targetName"/>
+				<Param name="string fileName"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SaveRenderedTextureA2">
+			<Overload descr="Saves rendered texture to file.
+			You have to set the coordinates of the region to capture.
+			The image file created by this function can be used immediately after its execution." retVal="void">
+				<Param name="string targetName"/>
+				<Param name="string fileName"/>
+				<Param name="real rectangleLeft"/>
+				<Param name="real rectangleUp"/>
+				<Param name="real rectangleRight"/>
+				<Param name="real rectangleDown"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SaveSnapShotA1">
+			<Overload descr="Saves a picture of the game to file.
+			The image file created by this function can be used immediately after its execution." retVal="void">
+				<Param name="string fileName"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SaveSnapShotA2">
+			<Overload descr="Saves a picture of the game to file.
+			You have to set the coordinates of the region to capture.
+			The image file created by this function can be used immediately after its execution." retVal="void">
+				<Param name="string fileName"/>
+				<Param name="real rectangleLeft"/>
+				<Param name="real rectangleTop"/>
+				<Param name="real rectangleRight"/>
+				<Param name="real rectangleBottom"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="IsPixelShaderSupported">
+			<Overload descr="Checks your whether or not your GPU supports the specified pixel shader version.
+			Returns true if supported.
+			Example: IsPixelShaderSupported(3,0); //checks for Pixel Shader version 3.0" retVal="boolean">
+				<Param name="real integerPart"/>
+				<Param name="real decimalPart"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetShader">
+			<Overload>
+				<Param name="real shaderObjectId"/>
+				<Param name="real renderPriority1"/>
+				<Param name="real renderPriority2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetShaderI">
+			<Overload>
+				<Param name="real shaderObjectId"/>
+				<Param name="real renderPriority1"/>
+				<Param name="real renderPriority2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ResetShader">
+			<Overload>
+				<Param name="real renderPriority1"/>
+				<Param name="real renderPriority2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ResetShaderI">
+			<Overload>
+				<Param name="real renderPriority1"/>
+				<Param name="real renderPriority2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraFocusX">
+			<Overload descr="Sets the x-coordinate of the camera focus." retVal="void">
+				<Param name="real x"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraFocusY">
+			<Overload descr="Sets the y-coordinate of the camera focus." retVal="void">
+				<Param name="real y"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraFocusZ">
+			<Overload descr="Sets the z-coordinate of the camera focus." retVal="void">
+				<Param name="real z"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraFocusXYZ">
+			<Overload descr="Sets the x-, y-, and z-coordinates of the camera focus." retVal="void">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real z"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraRadius">
+			<Overload descr="Sets the distance of the camera to the focus point." retVal="void">
+				<Param name="real distance"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraAzimuthAngle">
+			<Overload descr="Sets the azimuth angle from the focus point." retVal="void">
+				<Param name="real azimuthAngle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraElevationAngle">
+			<Overload descr="Sets the elevation angle from the focus point." retVal="void">
+				<Param name="real elevationAngle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraYaw">
+			<Overload descr="Sets the horizontal Yaw angle of the camera." retVal="void">
+				<Param name="real yawAngle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraPitch">
+			<Overload descr="Sets the vertical Pitch angle of the camera." retVal="void">
+				<Param name="real pitchAngle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraRoll">
+			<Overload descr="Sets the rotational Roll angle of the camera." retVal="void">
+				<Param name="real rollAngle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraX">
+			<Overload descr="Returns the x-coordinate of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraY">
+			<Overload descr="Returns the y-coordinate of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraZ">
+			<Overload descr="Returns the z-coordinate of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraFocusX">
+			<Overload descr="Returns the x-coordinate of the focus point." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraFocusY">
+			<Overload descr="Returns the y-coordinate of the focus point." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraFocusZ">
+			<Overload descr="Returns the z-coordinate of the focus point." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraRadius">
+			<Overload descr="Returns the distance from the focus point to the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraAzimuthAngle">
+			<Overload descr="Returns the azimuth angle from the focus point to the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraElevationAngle">
+			<Overload descr="Returns the elevation angle from the focus point to the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraYaw">
+			<Overload descr="Returns the horizontal Yaw angle of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraPitch">
+			<Overload descr="Returns the vertical Pitch angle of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraRoll">
+			<Overload descr="Returns the rotational Roll angle of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="SetCameraPerspectiveClip">
+			<Overload descr="Objects that are further or nearer than the clipping distance will not be drawn.
+			Default near clipping distance is 10.
+			Default far clipping distance is 2000." retVal="real">
+				<Param name="real near"/>
+				<Param name="real far"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Set2DCameraFocusX">
+			<Overload descr="Sets the x-coordinate of the focus point.
+			It is usually the center of the screen." retVal="void">
+				<Param name="real x"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Set2DCameraFocusY">
+			<Overload descr="Sets the y-coordinate of the focus point.
+			It generally is the center of the screen." retVal="void">
+				<Param name="real y"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Set2DCameraAngleZ">
+			<Overload descr="Sets the Z angle of the 2D Camera." retVal="void">
+				<Param name="real z"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Set2DCameraRatio">
+			<Overload descr="Sets the zoom of the camera (centered on the focus point).
+			This value is usually 1." retVal="void">
+				<Param name="real zoom"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Set2DCameraRatioX">
+			<Overload descr="Sets the magnification of the X axis of the 2D camera (centered on the focus point).
+			For example, if you set this value to 2, the x-axis will be doubled in size.
+			This value is usually 1.
+			If you specify a negative value, the x-axis will be flipped." retVal="void">
+				<Param name="real zoomX"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Set2DCameraRatioY">
+			<Overload descr="Sets the magnification of the Y axis of the 2D camera (centered on the focus point).
+			For example, if you set this value to 2, the y-axis will be doubled in size.
+			This value is usually 1.
+			If you specify a negative value, the y-axis will be flipped." retVal="void">
+				<Param name="real zoomY"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Reset2DCamera">
+			<Overload descr="Resets both the focus point and the zoom ratio,
+			respectively to the center of the screen and 1." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="Get2DCameraX">
+			<Overload descr="Returns the x-coordinate of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="Get2DCameraY">
+			<Overload descr="Returns the y-coordinate of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="Get2DCameraAngleZ">
+			<Overload descr="Returns the z rotation angle of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="Get2DCameraRatio">
+			<Overload descr="Returns the zoom ratio of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="Get2DCameraRatioX">
+			<Overload descr="Returns the x zoom ratio of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="Get2DCameraRatioY">
+			<Overload descr="Returns the y zoom ratio of the camera." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadScript">
+			<Overload descr="Loads and compiles the specified script, and returns its script ID.
+			Also calls @Loading and initializes global variables." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadScriptInThread">
+			<Overload descr="Loads and compiles the specified script in a different thread, and returns its script ID.
+			Also calls @Loading and initializes global variables." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="StartScript">
+			<Overload descr="Starts the specified script (@Initialize is called and @MainLoop begins)." retVal="void">
+				<Param name="real scriptId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CloseScript">
+			<Overload descr="Stops the specified script.
+			Until this function is called, the script will continue to run." retVal="void">
+				<Param name="real scriptId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="IsCloseScript">
+			<Overload descr="Returns whether the specified script has been stopped.
+			Returns true if the script is not running." retVal="boolean">
+				<Param name="real scriptId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetScriptArgument">
+			<Overload descr="Before starting the given script with StartScript,
+			sets a value that is to be passed to the given script upon starting.
+			You can then get this value in the script with GetScriptArgument. " retVal="void">
+				<Param name="real scriptId"/>
+				<Param name="real argumentIndex"/>
+				<Param name="free value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetScriptArgument">
+			<Overload descr="Returns the value of the specified argument,
+			previously set by SetScriptArgumentbefore the script was started." retVal="free">
+				<Param name="real argumentIndex"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetScriptArgumentCount">
+			<Overload descr="Returns the number of arguments set by SetScriptArgumentbefore the script was started." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="CloseStgScene">
+			<Overload descr="Ends the current scene (returns to script selection screen). " retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetOwnScriptID">
+			<Overload descr="Returns the script's own ID during execution." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetEventType">
+			<Overload descr="Returns the event type currently triggered in @Event." retVal="const"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetEventArgument">
+			<Overload descr="Returns the argument of the event currently triggered in @Event.
+			Can be an arbitrary value." retVal="free">
+				<Param name="real argumentIndex"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetScriptResult">
+			<Overload descr="Sets the result of the event in @Event, which can then be retrieved by GetScriptResult." retVal="void">
+				<Param name="free result"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetScriptResult">
+			<Overload descr="Returns the event result from SetScriptResult.
+			Can be an arbitrary value." retVal="free">
+				<Param name="real scriptId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetAutoDeleteObject">
+			<Overload descr="Sets whether to delete all existing objects that were created in the script at its termination.
+			If set to true, the script's objects will be deleted.
+			The default value is false." retVal="void">
+				<Param name="boolean enable"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="NotifyEvent">
+			<Overload descr="Calls the @Event of the script with the specified ID, triggering the specified event.
+			The event type may use a value greater than EV_USER." retVal="void">
+				<Param name="real scriptId"/>
+				<Param name="const eventType"/>
+				<Param name="free value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="NotifyEventAll">
+			<Overload descr="Calls the @Event of all scripts, triggering the specified event.
+			The event type may use a value greater than EV_USER." retVal="void">
+				<Param name="const eventType"/>
+				<Param name="free value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetScriptInfoA1">
+			<Overload descr="Returns const script type if infoType = INFO_SCRIPT_TYPE.
+			Returns string for other info types." retVal="string">
+				<Param name="string path"/>
+				<Param name="const infoType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetStgFrame">
+			<Overload descr="Sets the STG space frame. Default values are (32, 16, 416, 464, 20, 80)." retVal="void">
+				<Param name="real rectangleLeft"/>
+				<Param name="real rectangleTop"/>
+				<Param name="real rectangleRight"/>
+				<Param name="real rectangleBottom"/>
+				<Param name="real minimumPriority"/>
+				<Param name="real maximumPriority"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetScore">
+			<Overload descr="Returns the current score." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="AddScore">
+			<Overload descr="Adds the given value to the score." retVal="void">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetGraze">
+			<Overload descr="Returns the current amount of graze." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="AddGraze">
+			<Overload descr="Adds the given value to the graze count." retVal="void">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPoint">
+			<Overload descr="Returns the current amount of point items collected (default is the blue &quot;ten&quot; item)." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="AddPoint">
+			<Overload descr="Adds the given value to the point count." retVal="void">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetItemRenderPriorityI">
+			<Overload descr="Sets the render priority for items.
+			Priority must be within the range 0 to 100 (default is 60)." retVal="void">
+				<Param name="real priority"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetShotRenderPriorityI">
+			<Overload descr="Sets the render priority for bullets.
+			Priority must be within the range 0 to 100 (default is 50)." retVal="void">
+				<Param name="real priority"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetStgFrameRenderPriorityMinI">
+			<Overload descr="Returns the lowest render priority for the STG frame (0-100) (default is 20)." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetStgFrameRenderPriorityMaxI">
+			<Overload descr="Returns the highest render priority for the STG frame (0-100) (default is 80)." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetItemRenderPriorityI">
+			<Overload descr="Returns the render priority for items (0-100) (default is 60)." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetShotRenderPriorityI">
+			<Overload descr="Returns the render priority for shots (0-100) (default is 50)." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerRenderPriorityI">
+			<Overload descr="Returns the render priority for the player (0-100) (default is 30)." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetCameraFocusPermitPriorityI">
+			<Overload descr="Returns the highest render priority the 2D camera can affect (0-100) (default is 79)" retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetStgFrameLeft">
+			<Overload descr="Returns the leftmost value of the STG frame." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetStgFrameTop">
+			<Overload descr="Returns the topmost value of the STG frame." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetStgFrameWidth">
+			<Overload descr="Returns the width of the STG frame." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetStgFrameHeight">
+			<Overload descr="Returns the height of the STG frame." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetScreenWidth">
+			<Overload descr="Returns the width of Danmakufu's drawing space." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetScreenHeight">
+			<Overload descr="Returns the Height of Danmakufu's drawing space." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="IsReplay">
+			<Overload descr="Returns true if a replay is playing, false otherwise." retVal="boolean"/>
+		</KeyWord>
+		<KeyWord func="yes" name="AddArchiveFile">
+			<Overload descr="Adds the path to use when reading images or sounds from an archive file.
+			Returns true if the archive was successfully read, false otherwise." retVal="boolean">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerObjectID">
+			<Overload descr="Gets player object ID." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerScriptID">
+			<Overload descr="Returns the player's script ID.
+			This function returns the same value as GetOwnScriptID when used inside the player script." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerSpeed">
+			<Overload descr="Sets the normal speed and focus speed of the player." retVal="void">
+				<Param name="real normalSpeed"/>
+				<Param name="real focusSpeed"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerClip">
+			<Overload descr="Sets the area within which the player can move." retVal="void">
+				<Param name="real leftLimit"/>
+				<Param name="real topLimit"/>
+				<Param name="real rightLimit"/>
+				<Param name="real bottomLimit"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerLife">
+			<Overload descr="Sets value as life points for the player (can be non integer)." retVal="void">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerSpell">
+			<Overload descr="Sets the amount of bombs available for the player (can be non integer)." retVal="void">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerPower">
+			<Overload descr="Sets the amount of power points (can be non integer)." retVal="void">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerInvincibilityFrame">
+			<Overload descr="Sets the amount of frames for player invincibility." retVal="void">
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerDownStateFrame">
+			<Overload descr="Sets the amount of frames that will wait before respawning the player." retVal="void">
+				<Param name="real amount"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerRebirthFrame">
+			<Overload descr="Sets the amount of frames the player can counter bomb.
+			Default is 15." retVal="void">
+				<Param name="real amount"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerRebirthLossFrame">
+			<Overload descr="Sets the amount of counter bomb frames the player loses per counter bomb.
+			Default value is 3." retVal="void">
+				<Param name="real amount"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPlayerAutoItemCollectLine">
+			<Overload descr="Sets the y-coordinate of the auto collect line.
+			A negative value removes the line.
+			Default is no line." retVal="void">
+				<Param name="real y"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetForbidPlayerShot">
+			<Overload descr="When set to true, the player cannot use normal shots." retVal="void">
+				<Param name="boolean forbid"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetForbidPlayerSpell">
+			<Overload descr="When set to true, the player cannot use bombs." retVal="void">
+				<Param name="boolean forbid"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerX">
+			<Overload descr="Gets the x-coordinate of the player." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerY">
+			<Overload descr="Gets the y-coordinate of the player." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerState">
+			<Overload descr="Gets the player state." retVal="const"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerSpeed">
+			<Overload descr="Gets the player's speed in an array [unfocused, focused]." retVal="real[]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerClip">
+			<Overload descr="Gets the player's clip in an array [left, top, right, bottom]." retVal="real[]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerLife">
+			<Overload descr="Gets the player's life points." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerSpell">
+			<Overload descr="Gets the amount of bombs remaining." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerPower">
+			<Overload descr="Gets the amount of power points." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerInvincibilityFrame">
+			<Overload descr="Gets the amount of frames the player is invincible." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerDownStateFrame">
+			<Overload descr="Returns the amount of frames that the player will spend in the down state." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerRebirthFrame">
+			<Overload descr="Gets the amount of frames the player can counter bomb." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetAngleToPlayer">
+			<Overload descr="Gets the angle from the object with specified ID to the player." retVal="real">
+				<Param name="real objecId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="IsPermitPlayerShot">
+			<Overload descr="Returns true if the player can use normal shots." retVal="boolean"/>
+		</KeyWord>
+		<KeyWord func="yes" name="IsPermitPlayerSpell">
+			<Overload descr="Returns true if the player can use bombs.
+			The returned value may differ from a previously set SetForbidPlayerSpell.
+			For instance, it is forced to false during a LastSpell." retVal="boolean"/>
+		</KeyWord>
+		<KeyWord func="yes" name="IsPlayerLastSpellWait">
+			<Overload descr="Returns true if the player is counter bombing." retVal="boolean"/>
+		</KeyWord>
+		<KeyWord func="yes" name="IsPlayerSpellActive">
+			<Overload descr="Returns true if the player is currently using a bomb (not only the button press)." retVal="boolean"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerID">
+			<Overload descr="Returns the system ID of the player script.
+			This value is defined inside the player script in the #ID header." retVal="string"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetPlayerReplayName">
+			<Overload descr="Returns the replay ID of the player.
+			This value is defined inside the player script in the #ReplayName header." retVal="string"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetEnemyBossSceneObjectID">
+			<Overload descr="Gets the boss scene object ID.
+			When not in a boss scene, returns ID_INVALID." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetEnemyBossObjectID">
+			<Overload descr="Gets the ID of the boss present on the screen, and returns it in an array." retVal="real[]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetAllEnemyID">
+			<Overload descr="Gets the ID of every enemy present on the screen, and returns them in an array." retVal="real[]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetIntersectionRegistedEnemyID">
+			<Overload descr="Gets the Object ID of all enemies with a registered hitbox to player shots
+			(via ObjEnemy_SetIntersectionCircleToShot())." retVal="real[]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetAllEnemyIntersectionPosition">
+			<Overload descr="Gets the the position of all enemies for which collision detection is true (currently intersecting),
+			and returns it in a 2-dimension array ([index][&amp;lt;x-coordinate, y-coordinate&amp;gt;])." retVal="real[][]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetEnemyIntersectionPosition">
+			<Overload descr="Gets the enemy intersection position around given position,
+			and returns a 2D array ([index][&amp;lt;x-coordinate, y-coordinate&amp;gt;]).
+			The first value (index 0) corresponds to the nearest position." retVal="real[][]">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real highestAcquisitionValue"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetEnemyIntersectionPositionByIdA1">
+			<Overload descr="Gets all collision detection positions of the specified enemy,
+			and returns a 2D array ([index][&amp;lt;x-coordinate, y-coordinate&amp;gt;]).
+			The first value (index 0) corresponds to the nearest position from the enemy (unsure)." retVal="real[][]">
+				<Param name="real enemyObjectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetEnemyIntersectionPositionByIdA2">
+			<Overload descr="Gets all collision detection positions of the specified enemy,
+			and returns a 2D array ([index][&amp;lt;x-coordinate, y-coordinate&amp;gt;]).
+			The first value (index 0) corresponds to the nearest position from the specified position." retVal="real[][]">
+				<Param name="real enemyObjectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadEnemyShotData">
+			<Overload descr="Loads specified shot image file.
+			missing explanation about calling the function several times (?)
+			Files with the same name can only be loaded once." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ReloadEnemyShotData">
+			<Overload descr="Reloads specified shot image file
+			(you can also (re)load a file that has not been loaded by LoadEnemyShotData).
+			missing explanation about calling the function several times (?)
+			Unlike LoadEnemyShotData, this function can load the same file several times." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="DeleteShotAll">
+			<Overload descr="Deletes all bullets.
+			ALL will clear all bullets and lasers,
+			SHOT will clear only bullets,
+			and CHILD will clear bullets and lasers fired from the currently running script
+			(e.g. a stage script that spawns enemies,
+			putting CHILD in one of the enemy's script will clear only that enemy's bullets).
+			The second type determines how the bullet will be deleted.
+			IMMEDIATE will immediately delete the bullets,
+			FADE will slowly fade the bullets
+			(note, they will still be visible while fading out, but they will not have any collision),
+			and ITEM will turn the bullets into points that will immediately be collected to the player." retVal="void">
+				<Param name="const shotType"/>
+				<Param name="const deleteType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="DeleteShotInCircle">
+			<Overload descr="Same as DeleteShotAll, except it will only clear bullets in a defined circle." retVal="void">
+				<Param name="const shotType"/>
+				<Param name="const deleteType"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateShotA1">
+			<Overload descr="Creates a basic bullet that will move in the angle and speed defined.
+			Graphic is the image the bullet will have,
+			while delay is the time in frames that the bullet will appear.
+			During it's delay, there will be a cloud that appears where the bullet will spawn.
+			Note that the function will return a void value in a player script
+			if the player is unable to shoot." retVal="real">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+				<Param name="real graphicId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateShotA2">
+			<Overload descr="Creates a basic bullet that will move in the angle, speed, acceleration and max speed defined.
+			Graphic is the image the bullet will have,
+			while delay is the time in frames that the bullet will appear.
+			During it's delay, there will be a cloud that appears where the bullet will spawn.
+			The number defined for acceleration will be applied to the bullet per frame,
+			so this will usually have low numbers such as 0.1.
+			Negative values may be used, however,
+			having a negative value on acceleration but a positive number on max speed (or vice versa)
+			will result in the bullet spawning at max speed.
+			Note that the function will return a void value in a player script
+			if the player is unable to shoot." retVal="real">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+				<Param name="real acceleration"/>
+				<Param name="real maxSpeed"/>
+				<Param name="real graphicId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateShotOA1">
+			<Overload descr="Creates a bullet that will spawn on the coordinates of the given object id.
+			Graphic is the image the bullet will have,
+			while delay is the time in frames that the bullet will appear.
+			During it's delay, there will be a cloud that appears where the bullet will spawn.
+			Note that the function will return a void value in a player script
+			if the player is unable to shoot." retVal="real">
+				<Param name="real objectId"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+				<Param name="real graphicId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateShotB1">
+			<Overload descr="Creates a basic bullet that will move in x and y speeds defined.
+			Graphic is the image the bullet will have,
+			while delay is the time in frames that the bullet will appear.
+			During it's delay, there will be a cloud that appears where the bullet will spawn.
+			Note that the function will return a void value in a player script
+			if the player is unable to shoot." retVal="real">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real speedX"/>
+				<Param name="real speedY"/>
+				<Param name="real graphicId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateShotB2">
+			<Overload descr="Creates a basic bullet that will move in the angle, speed, x and y accelerations and max/min speeds defined.
+			Graphic is the image the bullet will have,
+			while delay is the time in frames that the bullet will appear.
+			During it's delay, there will be a cloud that appears where the bullet will spawn.
+			The number defined for acceleration will be applied to the bullet per frame,
+			so this will usually have low numbers such as 0.1.
+			Negative values may be used, however,
+			having a negative value on acceleration but a positive number on max speed (or vice versa)
+			will result in the bullet spawning at max speed.
+			Note that the function will return a void value in a player script
+			if the player is unable to shoot." retVal="real">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real speedX"/>
+				<Param name="real speedY"/>
+				<Param name="real accelX"/>
+				<Param name="real accelY"/>
+				<Param name="real maxSpeedX"/>
+				<Param name="real maxSpeedY"/>
+				<Param name="real graphicId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateShotOB1">
+			<Overload descr="Creates a basic bullet that will spawn on the coordinates of the given object id
+			and will move in x and y speeds defined.
+			Graphic is the image the bullet will have,
+			while delay is the time in frames that the bullet will appear.
+			During it's delay, there will be a cloud that appears where the bullet will spawn.
+			Note that the function will return a void value in a player script
+			if the player is unable to shoot." retVal="real">
+				<Param name="real objectId"/>
+				<Param name="real speedX"/>
+				<Param name="real speedY"/>
+				<Param name="real graphicId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateLooseLaserA1">
+			<Overload descr="Creates a laser that act like a bullet
+			and will move in the angle and speed defined,
+			but can be defined with a size.
+			This could also be used to create larger bullets.
+			Graphic is the image the laser will have,
+			while delay is the time in frames that the laser will appear.
+			During it's delay, there will be a cloud that appears where the bullet will spawn." retVal="real">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+				<Param name="real length"/>
+				<Param name="real width"/>
+				<Param name="real graphicId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateStraightLaserA1">
+			<Overload descr="Creates a laser mounted on a position.
+			The &quot;deleteTime&quot; argument determines how many frames until the laser disappears.
+			Graphic is the image the laser will have.
+			Delay will spawn a very thin laser that has no collision
+			in order to give the player a warning.
+			Having no delay while using this laser is not advisable,
+			as they spawn at full size the moment the delay is over." retVal="real">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real angle"/>
+				<Param name="real length"/>
+				<Param name="real width"/>
+				<Param name="real deleteTime"/>
+				<Param name="real graphicId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateCurveLaserA1">
+			<Overload descr="Creates a laser that will move in the angle and speed defined,
+			but can be altered with ObjMove_SetAngularVelocity to create a curving laser.
+			his function is heavy to process, so having many of them on-screen is not recommended." retVal="real">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+				<Param name="real length"/>
+				<Param name="real width"/>
+				<Param name="real graphicId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetShotIntersectionCircle">
+			<Overload descr="Creates the specified circle that will check for collisions.
+			The player dies when touching/entering the circle." retVal="void">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetShotIntersectionLine">
+			<Overload descr="Creates the specified line that will check for collisions.
+			The player dies when touching the line." retVal="void">
+				<Param name="real startX"/>
+				<Param name="real startY"/>
+				<Param name="real endX"/>
+				<Param name="real endY"/>
+				<Param name="real width"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetShotIdInCircleA1">
+			<Overload descr="Returns the object IDs of the bullets inside the given circle in an array.
+			Inside the player script, it will only return enemy bullet IDs, and vice versa." retVal="real[]">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetShotIdInCircleA2">
+			<Overload descr="Returns the IDs of the bullets inside the given circle
+			and corresponding to the target in an array." retVal="real[]">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real radius"/>
+				<Param name="const target"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetShotCount">
+			<Overload descr="Returns the number of bullets that exist from the given target." retVal="real">
+				<Param name="const target"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetShotAutoDeleteClip">
+			<Overload descr="Sets at what point the bullet will be automatically deleted
+			when leaving the STG screen.
+			Default boundary value is 64.
+			To override this auto deletion, use ObjShot_SetAutoDelete
+			on the bullet you want to prevent from auto deleting." retVal="void">
+				<Param name="real leftBoundary"/>
+				<Param name="real topBoundary"/>
+				<Param name="real rightBoundary"/>
+				<Param name="real bottomBoundary"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetShotDataInfoA1">
+			<Overload descr="Returns information depending on the information requested.
+			INFO_TYPE: Returns real array: [left, top, right, bottom].
+			INFO_DELAY_COLOR: Returns real array: [red, green, blue].
+			INFO_BLEND: Returns real (BLEND_ALPHA, BLEND_ADD_RGB, or BLEND_ADD_ARGB).
+			INFO_COLLISION: Radius of collision detection.
+			INFO_COLLISION_LIST: Returns real two-dimensional array: [radius, x, y]" retVal="free[]">
+				<Param name="real graphicId"/>
+				<Param name="const target"/>
+				<Param name="const infoType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="StartShotScript">
+			<Overload descr="Starts a shot script." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateItemA1">
+			<Overload descr="Creates an item at the specified point.
+			The types ending in &quot;_S&quot; will create a smaller version of the specified item.
+			&quot;scoring&quot; is the value the spawned item will add to your score." retVal="real">
+				<Param name="const type"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real scoring"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateItemA2">
+			<Overload descr="Creates an item at the specified point
+			and sets how quickly it will move towards the specified coordinates
+			before slowly falling down.
+			&quot;scoring&quot; is the value the spawned item will add to your score." retVal="real">
+				<Param name="const type"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real destinationX"/>
+				<Param name="real destinationY"/>
+				<Param name="real scoring"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateItemU1">
+			<Overload descr="Creates a user-defined item associated with the specified ID at the specified point.
+			&quot;scoring&quot; is the value the spawned item will add to your score." retVal="real">
+				<Param name="real itemId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real scoring"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreateItemU2">
+			<Overload descr="Creates a user-defined item associated with the specified ID at the specified point
+			and sets how quickly it will move towards the specified coordinates
+			before slowly falling down.
+			&quot;scoring&quot; is the value the spawned item will add to your score." retVal="real">
+				<Param name="real itemId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real destinationX"/>
+				<Param name="real destinationY"/>
+				<Param name="real scoring"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CollectAllItems">
+			<Overload descr="Makes all items fly towards the player." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="CollectItemsByType">
+			<Overload descr="Makes all items of the specified type fly toward the player." retVal="void">
+				<Param name="const type"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CollectItemsInCircle">
+			<Overload descr="Makes all items within the circle fly toward the player." retVal="void">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CancelCollectItems">
+			<Overload descr="Cancels any items that were currently moving to the player for collection." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="StartItemScript">
+			<Overload descr="Starts the script for processing user-defined items." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetDefaultBonusItemEnable">
+			<Overload descr="Sets whether or not to create the default autocollected bullet
+			delete items when bullets are deleted to items.
+			True will create the items, false will not.
+			The default value is true." retVal="void">
+				<Param name="boolean delete"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadItemData">
+			<Overload descr="Loads the specified item data.
+			Can be called any amount of times,
+			but currently existing IDs will be replaced by new ones of the same value.
+			You may not use the same file twice in this function;
+			to do so, see ReloadItemData." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ReloadItemData">
+			<Overload descr="Reloads the specified item data.
+			Can be called any amount of times, 
+			but currently existing IDs will be replaced by new ones of the same value.
+			You do not need to use LoadItemData before using this function." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="StartSlow">
+			<Overload descr="Creates a pseudo slow effect by forcing Danmakufu
+			to run at the specified FPS value (0-60).
+			There is currently only one target available, TARGET_ALL.
+			Use StopSlow to stop this effect." retVal="void">
+				<Param name="const target"/>
+				<Param name="real fps"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="StopSlow">
+			<Overload descr="Removes the pseudo slow, and restores Danmakufu to normal FPS." retVal="void">
+				<Param name="const target"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="IsIntersected_Line_Circle">
+			<Overload descr="Checks if the given line is colliding with the given circle.
+			Returns true if there is a collision; if there is no collision, it returns false." retVal="boolean">
+				<Param name="real startX"/>
+				<Param name="real startY"/>
+				<Param name="real endX"/>
+				<Param name="real endY"/>
+				<Param name="real width"/>
+				<Param name="real circleCenterX"/>
+				<Param name="real circleCenterY"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="IsIntersected_Obj_Obj">
+			<Overload descr="Checks if the given objects are colliding with each other.
+			Returns true if there is a collision; if there is no collision, it returns false.
+			This function is currently only available on bullet and laser objects." retVal="boolean">
+				<Param name="real objectId1"/>
+				<Param name="real objectId2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetObjectDistance">
+			<Overload descr="Returns the distance between the two objects.
+			If one of the objects' ID is invalid, -1 will be returned." retVal="real">
+				<Param name="real objectId1"/>
+				<Param name="real objectId2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetObject2dPosition">
+			<Overload descr="Returns the 2D coordinates of a 3D object.
+			The array is returned as [X, Y]." retVal="real[]">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Get2dPosition">
+			<Overload descr="Returns the 2D coordinates of the given 3D coordinates.
+			The array is returned as [X, Y]." retVal="real[]">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real z"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="erase">
+			<Overload descr="Removes the element at the given index from an array.
+			Returns the given array, with the element at the given index removed" retVal="free[]">
+				<Param name="free[] array"/>
+				<Param name="real index"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="length">
+			<Overload descr="Gets the size of an array" retVal="real">
+				<Param name="free[] array"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="concatenate">
+			<Overload descr="Merges two arrays into one ( ~ symbol can also be used instead).
+			Example: 
+			let array1 = [0,0];
+			let array2 = [1,1];
+			let array3 = concatenate(array1,array2); // or let array3 = array1~array2;
+			array3 will now return [0,0,1,1]." retVal="free[]">
+				<Param name="free[] array1"/>
+				<Param name="free[] array2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="slice">
+			<Overload descr="Cuts out a specific portion of an array.
+			Array[starting..ending] can also be used.
+			Returns the indices in between the cutoff values
+			(this includes the starting cutoff index but not the ending cutoff index)." retVal="free[]">
+				<Param name="free[] array"/>
+				<Param name="real start"/>
+				<Param name="real end"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_Delete">
+			<Overload descr="Deletes specified object." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_IsDeleted">
+			<Overload descr="Returns true if the specified object has been deleted." retVal="boolean">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_SetVisible">
+			<Overload descr="Sets visibility of specified object.
+			If visible is set to false, the object will not be drawn." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean visible"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_IsVisible">
+			<Overload descr="Returns true if the specified object is visible." retVal="boolean">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_SetRenderPriority">
+			<Overload descr="Sets the object's render priority as a ratio (0.0-1.0)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real priority"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_SetRenderPriorityI">
+			<Overload descr="Sets the object's render priority in the range 0-100 (integer)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real priority"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_GetRenderPriority">
+			<Overload descr="Returns the object's render priority as a ratio (0.0-1.0)." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_GetRenderPriorityI">
+			<Overload descr="Returns the object's render priority as an integer (0-100)." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_GetValue">
+			<Overload descr="Returns the value associated with the given key for the given object,
+			previously set by Obj_SetValue.
+			Warning: If the key-value pair does not exist or was deleted,
+			attempting to access it will crash the program." retVal="free">
+				<Param name="real objectId"/>
+				<Param name="string key"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_GetValueD">
+			<Overload descr="Returns the value associated with the given key for the given object,
+			previously set by Obj_SetValue.
+			If the key-value pair doesn't exist, the default value is returned instead." retVal="free">
+				<Param name="real objectId"/>
+				<Param name="string key"/>
+				<Param name="free default"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_SetValue">
+			<Overload descr="For the given object, maps the given key to the given value.
+			The value can be returned by using Obj_GetValue with the corresponding key." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string key"/>
+				<Param name="free value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_DeleteValue">
+			<Overload descr="Deletes the key-value pair previously set by Obj_SetValue." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string key"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_IsValueExists">
+			<Overload descr="Checks whether the object has a key-value pair for the given key
+			and returns true if it does." retVal="boolean">
+				<Param name="real objectId"/>
+				<Param name="string key"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="Obj_GetType">
+			<Overload descr="Retrieves the type of object." retVal="const">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetX">
+			<Overload descr="Sets the x-coordinate of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetY">
+			<Overload descr="Sets the y-coordinate of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real y"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetZ">
+			<Overload descr="Sets the z-coordinate of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real z"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetPosition">
+			<Overload descr="Sets the x, y and z-coordinate of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real z"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetAngleX">
+			<Overload descr="Sets the x-angle of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real angle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetAngleY">
+			<Overload descr="Sets the y-angle of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real angle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetAngleZ">
+			<Overload descr="Sets the z-angle of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real angle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetAngleXYZ">
+			<Overload descr="Sets the x, y and z-angle of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real angleX"/>
+				<Param name="real angleY"/>
+				<Param name="real angleZ"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetScaleX">
+			<Overload descr="Sets the x-scale of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real scale"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetScaleY">
+			<Overload descr="Sets the y-scale of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real scale"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetScaleZ">
+			<Overload descr="Sets the z-scale of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real scale"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetScaleXYZ">
+			<Overload descr="Sets the x, y and z-scale of the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real scaleX"/>
+				<Param name="real scaleY"/>
+				<Param name="real scaleZ"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetColor">
+			<Overload descr="Sets the color of the object using RGB (0-255)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real red"/>
+				<Param name="real green"/>
+				<Param name="real blue"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetColorHSV">
+			<Overload descr="Sets the Hue (0-359), Saturation (0-255), and Value (0-255) of an object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real hue"/>
+				<Param name="real saturation"/>
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetAlpha">
+			<Overload descr="Sets the alpha value of the object.
+			A value of 0 will make the object invisible.
+			A value of 255 will give the object full opacity.
+			Alpha blend type must be used for this to work.
+			To get a transparent render using additive blend,
+			the color has to be set to black (0, 0, 0) using ObjRender_SetColor." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real alpha"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetBlendType">
+			<Overload descr="Sets the blend type for the specified object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="const type"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetX">
+			<Overload descr="Returns the x-coordinate of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetY">
+			<Overload descr="Returns the y-coordinate of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetZ">
+			<Overload descr="Returns the z-coordinate of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetAngleX">
+			<Overload descr="Returns the x-angle of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetAngleY">
+			<Overload descr="Returns the y-angle of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetAngleZ">
+			<Overload descr="Returns the z-angle of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetScaleX">
+			<Overload descr="Returns the x-scale of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetScaleY">
+			<Overload descr="Returns the y-scale of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetScaleZ">
+			<Overload descr="Returns the z-scale of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_GetBlendType">
+			<Overload descr="Returns the blend type for the specified object." retVal="const">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetZWrite">
+			<Overload descr="Allows or prevents the object from writing in the Z-buffer." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean allow"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetZTest">
+			<Overload descr="Sets whether or not the object uses the Z-buffer." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean use"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetFogEnable">
+			<Overload descr="Allows or prevents the object from being affected by the fog.
+			Defaults to true." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean allow"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjRender_SetPermitCamera">
+			<Overload descr="Determines whether the object is affected by the 2D camera.
+			If set to false, the object will not be affected by the camera regardless of render priority." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean permit"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_Create">
+			<Overload descr="Creates a Primitive object." retVal="real">
+				<Param name="const type"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_SetPrimitiveType">
+			<Overload descr="Sets the vertex layout for the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="const type"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_SetVertexCount">
+			<Overload descr="Sets the number of vertices the object contains." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real count"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_GetVertexCount">
+			<Overload descr="Returns the number of vertices the object contains." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_SetTexture">
+			<Overload descr="Sets the specified texture on the object.
+			Loads the texture file if it has not already been loaded." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_SetVertexPosition">
+			<Overload descr="Sets the position of the specified vertex." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real vertexIndex"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real z"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_GetVertexPosition">
+			<Overload descr="Returns the position of the specified vertex in an array [x,y,z]." retVal="real[]">
+				<Param name="real objectId"/>
+				<Param name="real vertexIndex"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_SetVertexUV">
+			<Overload descr="Sets the UV-coordinates for the specified vertex.
+			The value for the coordinates must be in the range (0.0-1.0).
+			For instance, if you want a vertex to be at the center-top of a 512*512 texture,
+			you have to set x to 0.5 and y to 1.0.
+			As it may be troublesome to convert pixels into a 0.0-1.0 value,
+			ObjPrim_SetVertexUVT is recommended." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real vertexIndex"/>
+				<Param name="real uvX"/>
+				<Param name="real uvY"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_SetVertexUVT">
+			<Overload descr="Sets the UV-coordinates for the specified vertex.
+			You must set the object's texture using ObjPrim_SetTexture beforehand." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real vertexIndex"/>
+				<Param name="real uvX"/>
+				<Param name="real uvY"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_SetVertexColor">
+			<Overload descr="Sets the color of the specified vertex (0-255)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real vertexIndex"/>
+				<Param name="real red"/>
+				<Param name="real green"/>
+				<Param name="real blue"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPrim_SetVertexAlpha">
+			<Overload descr="Sets the alpha value of the specified vertex (0-255)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real vertexIndex"/>
+				<Param name="real alpha"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSprite2D_SetSourceRect">
+			<Overload descr="Sets the texture rectangle for the sprite.
+			This is the rectangle on the original texture from which the sprite will be drawn." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real leftCoord"/>
+				<Param name="real topCoord"/>
+				<Param name="real rightCoord"/>
+				<Param name="real bottomCoord"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSprite2D_SetDestRect">
+			<Overload descr="Sets the drawing rectangle for the sprite.
+			This is the rectangle where the sprite will be drawn." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real left"/>
+				<Param name="real top"/>
+				<Param name="real right"/>
+				<Param name="real bottom"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSprite2D_SetDestCenter">
+			<Overload descr="Sets the drawing rectangle for the sprite
+			by mapping the center of the source rectangle to (0, 0).
+			For instance, if the rectangle set with ObjSprite2D_SetSourceRect
+			is (24, 32, 48, 46) (which is 24 wide and 14 high),
+			the destination rectangle becomes (-12, -7, 12, 7)." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpriteList2D_SetSourceRect">
+			<Overload descr="Sets the texture rectangle for the sprite.
+			This is the rectangle on the original texture from which the sprite will be drawn." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real leftCoord"/>
+				<Param name="real topCoord"/>
+				<Param name="real rightCoord"/>
+				<Param name="real bottomCoord"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpriteList2D_SetDestRect">
+			<Overload descr="Sets the drawing rectangle for the sprite.
+			This is the rectangle where the sprite will be drawn." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real left"/>
+				<Param name="real top"/>
+				<Param name="real right"/>
+				<Param name="real bottom"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpriteList2D_SetDestCenter">
+			<Overload descr="Sets the drawing rectangle for the sprite
+			by mapping the center of the source rectangle to (0, 0).
+			For instance, if the rectangle set with ObjSpriteList2D_SetSourceRect
+			is (24, 32, 48, 46) (which is 24 wide and 14 high),
+			the destination rectangle becomes (-12, -7, 12, 7)." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpriteList2D_AddVertex">
+			<Overload descr="Adds a vertex to the specified object.
+			The amount of rectangles drawn is increased by 1." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpriteList2D_CloseVertex">
+			<Overload descr="Adds the last vertex to the object.
+			Transforming the object with ObjRender_* will affect all rectangles after using this function." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpriteList2D_ClearVertexCount">
+			<Overload descr="Clears vertex count for the specified object." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSprite3D_SetSourceRect">
+			<Overload descr="Sets the texture rectangle for the sprite." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real leftCoord"/>
+				<Param name="real topCoord"/>
+				<Param name="real rightCoord"/>
+				<Param name="real bottomCoord"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSprite3D_SetDestRect">
+			<Overload descr="Sets the drawing rectangle for the sprite.
+			This is the rectangle where the sprite will be drawn." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real left"/>
+				<Param name="real top"/>
+				<Param name="real right"/>
+				<Param name="real bottom"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSprite3D_SetSourceDestRect">
+			<Overload descr="Sets the texture rectangle for the sprite,
+			and maps the center of the rectangle to the destination coordinates (0, 0)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real left"/>
+				<Param name="real top"/>
+				<Param name="real right"/>
+				<Param name="real bottom"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSprite3D_SetBillboard">
+			<Overload descr="If set to true, the object will always be facing the camera." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean billboard"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMesh_Create">
+			<Overload descr="Creates a 3D mesh object and returns its ID." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMesh_Load">
+			<Overload descr="Loads a 3D mesh file.
+			The file must be either .mqo (Metasequoia) or .elem (Elfreina) (both are Japanese softwares)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string pathToModelFile"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMesh_SetColor">
+			<Overload descr="Sets the color of the mesh (0-255)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real red"/>
+				<Param name="real green"/>
+				<Param name="real blue"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMesh_SetAlpha">
+			<Overload descr="Sets the alpha value of the mesh (0-255)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real alpha"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMesh_SetAnimation">
+			<Overload descr="Sets the animation of the mesh object.
+			The animation frame of the specified animation name is drawn." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string animationName"/>
+				<Param name="real frame"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMesh_SetCoordinate2D">
+			<Overload descr="When set to true, allows the mesh to be positioned using 2D coordinates." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean allow"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_Create">
+			<Overload descr="Creates a Text object and returns its ID." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetText">
+			<Overload descr="Gives the text object some text to display." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string text"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetFontType">
+			<Overload descr="Sets the specified font to the text object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string fontName"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetFontSize">
+			<Overload descr="Sets the size of the font for the text object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real size"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetFontBold">
+			<Overload descr="If set to true, the text will be displayed in bold characters." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean bold"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetFontColorTop">
+			<Overload descr="Sets the top color of the text (0-255)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real red"/>
+				<Param name="real green"/>
+				<Param name="real blue"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetFontColorBottom">
+			<Overload descr="Sets the bottom color of the text (0-255)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real red"/>
+				<Param name="real green"/>
+				<Param name="real blue"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetFontBorderWidth">
+			<Overload descr="Sets the width of the font border." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real width"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetFontBorderType">
+			<Overload descr="Sets the type of the font border." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="const border"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetFontBorderColor">
+			<Overload descr="Sets the color of the border (0-255)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real red"/>
+				<Param name="real green"/>
+				<Param name="real blue"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetMaxWidth">
+			<Overload descr="Sets the maximum width of the text object.
+			The text will automatically create a new line whenever needed." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real width"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetMaxHeight">
+			<Overload descr="Sets the maximum height of the text object.
+			Any part of the text exceeding this height will not be drawn." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real height"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetLinePitch">
+			<Overload descr="Sets the line pitch (space between lines) of the text object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real pitch"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetSidePitch">
+			<Overload descr="Sets the side pitch (space between characters) of the text object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real pitch"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetTransCenter">
+			<Overload descr="Sets the given coordinates of the text object as its transformation center (rotation, zoom...)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetAutoTransCenter">
+			<Overload descr="When true, sets the center of the text object as its transformation center.
+			Default is true." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean auto"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetHorizontalAlignment">
+			<Overload descr="Sets the alignment of the text.
+			To use center or right aligned text, 
+			you have to set the maximum width using ObjText_SetMaxWidth
+			(in order to know where the right border is).
+			For instance, to align text to the right with a right border at 192 and a maximum width of 300,
+			you can use the following:
+			ObjText_SetHorizontalAlignment(obj, ALIGNMENT_RIGHT);
+			ObjText_SetMaxWidth(obj, 300);
+			ObjRender_SetX(obj, 192 - 300);" retVal="void">
+				<Param name="real objectId"/>
+				<Param name="const alignment"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_SetSyntacticAnalysis">
+			<Overload descr="Allows or prevents checking for the existence of bracket tags
+			(such as line break or ruby text) within the text for this object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="bool check"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_GetTextLength">
+			<Overload descr="Returns the length of the specified text object.
+			When using Japanese characters,
+			a half-width character counts as 1
+			and a full-width character counts as 2 characters." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_GetTextLengthCU">
+			<Overload descr="Returns the length of the specified text object.
+			Newlines and ruby text are not counted.
+			When using Japanese characters,
+			both half-width and full-width characters count as 1 character." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_GetTextLengthCUL">
+			<Overload descr="Returns an array of the lengths of each line of the specified text object.
+			Newlines and ruby text are not counted.
+			When using Japanese characters,
+			both half-width and full-width characters count as 1 character." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_GetTotalWidth">
+			<Overload descr="Returns the overall width of all lines of the text object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjText_GetTotalHeight">
+			<Overload descr="Returns the combined height of all lines of the text object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShader_Create">
+			<Overload descr="Creates a shader object." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShader_SetShaderF">
+			<Overload descr="Set shader file." retVal="boolean">
+				<Param name="real objectId"/>
+				<Param name="string pathToShader"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShader_SetShaderO">
+			<Overload descr="Set the shader in the shader object to the specified object" retVal="boolean">
+				<Param name="real objectId"/>
+				<Param name="real shaderObjectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShader_ResetShader">
+			<Overload descr="Clear the shader of the specified object." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShader_SetTechnique">
+			<Overload descr="Set the technique you want to run." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string technique"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShader_SetVector">
+			<Overload descr="Set vector." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string parameterId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real z"/>
+				<Param name="real w"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShader_SetFloat">
+			<Overload descr="Set float value to the shader.." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string parameterId"/>
+				<Param name="real value"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShader_SetFloatArray">
+			<Overload descr="Set array of values to the shader." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string parameterId"/>
+				<Param name="real[] values"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShader_SetTexture">
+			<Overload descr="Set the texture to the shader. You can call multiple textures." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string parameterId"/>
+				<Param name="string technique"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_Create">
+			<Overload descr="Creates a sound object." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_Load">
+			<Overload descr="Loads the specified sound file." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string pathToFile"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_Play">
+			<Overload descr="Plays the sound file associated to the object." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_Stop">
+			<Overload descr="Stops the sound file associated to the object." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_SetVolumeRate">
+			<Overload descr="Sets the volume of the sound object (0-100)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real volume"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_SetPanRate">
+			<Overload descr="Sets the pan volume of the sound object (-100-100).
+			0 is neutral, -100 is left-side only, 100 is right-side only." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real volume"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_SetFade">
+			<Overload descr="Sets the fade time of the sound object (translation of the fade timing needed)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real fade"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_SetLoopEnable">
+			<Overload descr="When set to true, the sound will loop." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean loop"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_SetLoopTime">
+			<Overload descr="Sets the timing of the loop, in seconds." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real loopStart"/>
+				<Param name="real loopEnd"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_SetLoopSampleCount">
+			<Overload descr="Sets the timing of the loop based on the sample count." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real loopSampleStart"/>
+				<Param name="real loopSampleEnd"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_SetRestartEnable">
+			<Overload descr="When set to true, allows the sound object to be restarted rather than continuing from where it left off." retVal="RTYPE">
+				<Param name="real objectId"/>
+				<Param name=" 2) restart (bool)"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_SetSoundDivision">
+			<Overload descr="Specifies whether a sound is a BGM or a sound effect:" retVal="void">
+				<Param name="real objectId"/>
+				<Param name="const soundType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_IsPlaying">
+			<Overload descr="Returns true if the sound file is playing." retVal="boolean">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSound_GetVolumeRate">
+			<Overload descr="Returns the volume (0-100) of the sound file." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFile_Create">
+			<Overload descr="Creates a file object." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFile_Open">
+			<Overload descr="Opens a file for reading with the specified path
+			and binds the specified file object to the opened file." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string filePath"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFile_OpenNW">
+			<Overload descr="Opens a file for both reading and writing with the specified path
+			and binds the specified file object to the opened file." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="string filePath"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFile_Store">
+			<Overload descr="Saves a file previously opened with ObjFile_OpenNW.
+			Must be called once after writing the data." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFile_GetSize">
+			<Overload descr="Returns file size in bytes(?)." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileT_GetLineCount">
+			<Overload descr="Returns number of lines in text file." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileT_GetLineText">
+			<Overload descr="Returns line of text from text file. Line number starts from 1." retVal="string">
+				<Param name="real objectId"/>
+				<Param name="real lineNumber"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileT_AddLine">
+			<Overload descr="Adds line to text file." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real lineNumber"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileT_ClearLine">
+			<Overload descr="." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileT_SplitLineText">
+			<Overload descr="." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real value1"/>
+				<Param name="real value2"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_SetByteOrder">
+			<Overload descr="Sets Byte Order of file. Options are:
+			ENDIAN_LITTLE: Little endian (default)
+			ENDIAN_BIG: Big endian" retVal="void">
+				<Param name="real objectId"/>
+				<Param name="const byteOrder"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_SetCharacterCode">
+			<Overload descr="Sets Character Code of file. Default is CODE_ACP." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="const encoding"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_GetPointer">
+			<Overload descr="." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_GetSeek">
+			<Overload descr="." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real filePointer"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_ReadBoolean">
+			<Overload descr="Reads a byte from the file and returns a Boolean value." retVal="boolean">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_ReadByte">
+			<Overload descr="Reads a 1-byte integer from the file." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_ReadShort">
+			<Overload descr="Reads a 2-byte integer from the file." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_ReadInteger">
+			<Overload descr="Reads a 4-byte integer from the file." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_ReadLong">
+			<Overload descr="Reads a 8-byte integer from the file." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_ReadFloat">
+			<Overload descr="Reads a 4-byte floating-point number from the file." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_ReadDouble">
+			<Overload descr="Reads a 8-byte floating point number from the file." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjFileB_ReadString">
+			<Overload descr="Given a specified number of bytes to read, reads a string.
+			Note: due to a bug, this function will never return any characters outside of Shift-JIS." retVal="string">
+				<Param name="real objectId"/>
+				<Param name="real bytesToRead"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetX">
+			<Overload descr="Sets the x coordinate of the specified object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetY">
+			<Overload descr="Sets the y coordinate of the specified object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real y"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetPosition">
+			<Overload descr="Sets the x and y of the specified object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetSpeed">
+			<Overload descr="Sets the movement speed per frame for the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real speed"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetAngle">
+			<Overload descr="Sets the movement angle for the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real angle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetAcceleration">
+			<Overload descr="Sets the movement acceleration per frame for the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real acceleration"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetMaxSpeed">
+			<Overload descr="Sets the maximum/minimum speed which the object will approach using the ObjMove_SetAcceleration function." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real speed"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetAngularVelocity">
+			<Overload descr="Sets the change in movement angle per frame for the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real angular"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetDestAtSpeed">
+			<Overload descr="Moves the object towards the given coordinates at the speed specified." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real speed"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetDestAtFrame">
+			<Overload descr="Moves the object towards the given coordinates in the number of frames specified." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real frames"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_SetDestAtWeight">
+			<Overload descr="Moves the object towards the given coordinates.
+			It will slow down near the end of the movement based on the weight specified." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real weight"/>
+				<Param name="real maxSpeed"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_AddPatternA1">
+			<Overload descr="After the specified number of frames, changes the speed and angle of the object.
+			NO_CHANGE can be used to preserve the original speed or angle." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real frame"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_AddPatternA2">
+			<Overload descr="After the specified number of frames, changes the speed, angle,
+			acceleration, angular velocity, and maximum speed of the object.
+			NO_CHANGE can be used to preserve the original speed or angle." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real frame"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+				<Param name="real acceleration"/>
+				<Param name="real angular"/>
+				<Param name="real maxSpeed"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_AddPatternA3">
+			<Overload descr="After the specified number of frames, changes the speed, angle,
+			acceleration, angular velocity, and maximum speed of the object.
+			Changes the bullet graphic.
+			(Similar to SetShotDataA, but with acceleration and angular velocity swapped)" retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real frame"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+				<Param name="real acceleration"/>
+				<Param name="real angular"/>
+				<Param name="real maxSpeed"/>
+				<Param name="real graphicId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_AddPatternA4">
+			<Overload descr="After the specified number of frames, changes the speed, angle,
+			acceleration, angular velocity, maximum speed and graphic of the object.
+			The angle parameter is relative to the angle from the object to the target.
+			For example, if GetPlayerObjectID is used as the target, 
+			an angle of 0 will cause the object to aim for the player. (Replaces SetShotDirectionType)" retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real frame"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+				<Param name="real acceleration"/>
+				<Param name="real angular"/>
+				<Param name="real maxSpeed"/>
+				<Param name="real targetId"/>
+				<Param name="real graphicId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_AddPatternB1">
+			<Overload descr="After the specified number of frames, changes the x and y movement speeds of the object.
+			NO_CHANGE can be used to preserve the original speeds." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real frame"/>
+				<Param name="real speedX"/>
+				<Param name="real speedY"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_AddPatternB2">
+			<Overload descr="After the specified number of frames, changes the x and y movement speeds of the object.
+			Can change object x/y acceleration and x/y maximum speed.
+			NO_CHANGE can also be used for these new parameters." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real frame"/>
+				<Param name="real speedX"/>
+				<Param name="real speedY"/>
+				<Param name="real accelX"/>
+				<Param name="real accelY"/>
+				<Param name="real maxSpeedX"/>
+				<Param name="real maxSpeedY"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_AddPatternB3">
+			<Overload descr="After the specified number of frames, changes the x and y movement speeds of the object.
+			Can change object x/y acceleration and x/y maximum speed.
+			Can also change the bullet graphic. (Replaces SetShotDataA_XY)" retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real frame"/>
+				<Param name="real speedX"/>
+				<Param name="real speedY"/>
+				<Param name="real accelX"/>
+				<Param name="real accelY"/>
+				<Param name="real maxSpeedX"/>
+				<Param name="real maxSpeedY"/>
+				<Param name="real graphicId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_GetX">
+			<Overload descr="Returns the x coordinate of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_GetY">
+			<Overload descr="Returns the y coordinate of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_GetSpeed">
+			<Overload descr="Returns the movement speed of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjMove_GetAngle">
+			<Overload descr="Returns the movement angle of the object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemy_Create">
+			<Overload descr="Creates an Enemy object and returns its ID.
+			In order to draw the enemy object and have it listed as an existing enemy,
+			you have to register it using ObjEnemy_Regist.
+			If you want to create a boss enemy object, 
+			you have to create a boss scene object first." retVal="real">
+				<Param name="const enemyType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemy_Regist">
+			<Overload descr="Makes the specified enemy object active." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemy_GetInfo">
+			<Overload descr="Returns information about enemy." retVal="real">
+				<Param name="real objectId"/>
+				<Param name="const infoType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemy_SetLife">
+			<Overload descr="Sets the amount of life points for the specified enemy object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real life"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemy_AddLife">
+			<Overload descr="Adds the specified amount of life points to the enemy's life." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real life"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemy_SetDamageRate">
+			<Overload descr="Sets the damage rate of the player's attacks against the specified enemy.
+			Setting to 0 will cause the enemy to take no damage, 100 is the default (100%) value.
+			Values above 100 are possible." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real shotDamageRate"/>
+				<Param name="real spellDamageRate"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemy_SetIntersectionCircleToShot">
+			<Overload descr="Sets the position and size of the enemy hitbox
+			(any attack from the player touching the circle will damage the enemy)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemy_SetIntersectionCircleToPlayer">
+			<Overload descr="Sets the enemy hitbox for player collision.
+			Any collision with the circle will kill the character." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemyBossScene_Create">
+			<Overload descr="Creates a Boss Scene object and returns its ID." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemyBossScene_Regist">
+			<Overload descr="Starts the specified boss scene." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemyBossScene_Add">
+			<Overload descr="Adds the specified script to the boss scene at the specified phase." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real phase"/>
+				<Param name="string pathToScript"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemyBossScene_LoadInThread">
+			<Overload descr="Compiles all the enemy scripts in the boss scene and initializes global variables.
+			As the length of compile time cannot be guaranteed,
+			initialize all global variables besides constants in @Initialize." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemyBossScene_GetInfo">
+			<Overload descr="Returns information about boss scene.
+			With regards to the &quot;step&quot; info types, 
+			step refers to the individual sections specified in the ObjEnemyBossScene_Addfunction's second argument.
+			For each script (referred to as an attack here) you load into the step,
+			you increase the step life count of that specific step by 1." retVal="free">
+				<Param name="real objectId"/>
+				<Param name="const infoType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemyBossScene_SetSpellTimer">
+			<Overload descr="Sets the timer." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real timer"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjEnemyBossScene_StartSpell">
+			<Overload descr="Starts the boss spell card." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_Create">
+			<Overload descr="Creates a Shot object and returns its ID.
+			In order to draw and fire the shot object and have it listed as an existing bullet,
+			you have to register it using ObjShot_Regist." retVal="real">
+				<Param name="const objectType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_Regist">
+			<Overload descr="Activates the shot object, which will now be fired." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetAutoDelete">
+			<Overload descr="Enables or disables auto-deletion of the shot object when outside of the screen boundaries.
+			Defaults to true." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean delete"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_FadeDelete">
+			<Overload descr="Fades out the shot object and deletes it." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetDeleteFrame">
+			<Overload descr="Deletes the shot object after the specified number of frames." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetDelay">
+			<Overload descr="Delays the shot object, firing it after the specified number of frames.
+			Bullets will glow to announce delay; lasers will be shown very thin." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real delay"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetSpellResist">
+			<Overload descr="When set to true, the shot object will not be deleted by the player's bomb.
+			Defaults to false." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean resist"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetGraphic">
+			<Overload descr="Gives the shot object the specified graphic." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real graphicId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetSourceBlendType">
+			<Overload descr="Gives the shot object's delay graphic the specified blend type." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="const blend"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetDamage">
+			<Overload descr="Sets the damage of the specified shot object.
+			For player shots only." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real damage"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetPenetration">
+			<Overload descr="Sets the penetration of the shot object.
+			The shot object can hit enemies as many times as the penetration value before being deleted.
+			For player shots only." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real penetration"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetEraseShot">
+			<Overload descr="Enables/disables the ability to erase enemy shots
+			when the specified shot object comes into contact with it.
+			Each time a shot is erased, the penetration of the shot object will go down by 1.
+			For player shots only." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean erase"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetSpellFactor">
+			<Overload descr="Sets whether or not to use the spell damage factor for the shot object.
+			For player shots only." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean enable"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_ToItem">
+			<Overload descr="Turns the bullet into an item." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_AddShotA1">
+			<Overload descr="At the specified frame, spawns the added shot object at the source shot object's position." retVal="void">
+				<Param name="real sourceObjectId"/>
+				<Param name="real shotObjectId"/>
+				<Param name="real frame"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_AddShotA2">
+			<Overload descr="At the specified frame, spawns the added shot object
+			at the specified distance and angle from the source shot object's position." retVal="void">
+				<Param name="real sourceObjectId"/>
+				<Param name="real shotObjectId"/>
+				<Param name="real frame"/>
+				<Param name="real distance"/>
+				<Param name="real angle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetIntersectionCircleA1">
+			<Overload descr="Creates a hitbox of specified radius for collision detection of the shot object.
+			In order to maintain the hitbox, it must be set every frame.
+			There can be multiple hitboxes set for one shot object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetIntersectionCircleA2">
+			<Overload descr="Creates a hitbox of specified radius for collision detection of the shot object.
+			In order to maintain the hitbox, it must be set every frame.
+			There can be multiple hitboxes set for one shot object.
+			Coordinates of hitbox center are set in relation to the object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetIntersectionLine">
+			<Overload descr="Creates a line segment hitbox
+			between the specified coordinates for collision detection of the shot object.
+			In order to maintain the hitbox, it must be set every frame.
+			There can be multiple hitboxes set for one shot object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real startX"/>
+				<Param name="real startY"/>
+				<Param name="real endX"/>
+				<Param name="real endY"/>
+				<Param name="real width"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetIntersectionEnable">
+			<Overload descr="Sets whether collision detection of the shot object will be checked.
+			If set to false, the shot object will have no collision detection." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean enable"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_SetItemChange">
+			<Overload descr="Sets whether the shot object will turn into an item when deleted.
+			If set to false, the shot object will not turn into an item." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean enable"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_IsSpellResist">
+			<Overload descr="Returns whether the shot object can be deleted by a player bomb.
+			Shot object bomb resistance can be set with ObjShot_SetSpellResist." retVal="boolean">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjShot_GetImageID">
+			<Overload descr="Returns the graphic ID of the shot object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjLaser_SetLength">
+			<Overload descr="Sets the length of the laser object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real length"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjLaser_SetRenderWidth">
+			<Overload descr="Sets the visible width of the laser object (not the same as the laser object's collision width). " retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real width"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjLaser_SetIntersectionWidth">
+			<Overload descr="Sets the collision width of the laser object.
+			This can be set to be larger than the laser object's render width, so take caution." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real width"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjLaser_SetGrazeInvalidFrame">
+			<Overload descr="Specify the number of frames after a graze where graze is not counted.
+			If you specify 0, the laser object can be grazed only once.
+			The default value is 20 frames (3 graze/second)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real frames"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjLaser_SetInvalidLength">
+			<Overload descr="Sets the portion of the laser object where there is no collision,
+			in relation to the base and the tip of the laser.
+			By default, the values are 10 (10%)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real fromBase"/>
+				<Param name="real fromTip"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjLaser_GetLength">
+			<Overload descr="Returns the length of the laser object." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjStLaser_SetAngle">
+			<Overload descr="Sets the angle at which the straight laser object will point at
+			(different from movement angle)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real angle"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjStLaser_GetAngle">
+			<Overload descr="Returns the angle at which the straight laser object is pointing
+			(different from movement angle)." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjStLaser_SetSource">
+			<Overload descr="Sets whether the light source at the base of the straight laser object is drawn." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean draw"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjCrLaser_SetTipDecrement">
+			<Overload descr="Sets the transparency reduction rate at the tip of the curved laser object. (0.0-1.0)
+			Default is 1.0 (tip of laser is invisible)." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real transparencyReductioRate"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjItem_SetItemID">
+			<Overload descr="Sets the ID of the item object, as defined in the item definition script." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real itemId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjItem_SetRenderScoreEnable">
+			<Overload descr="Sets whether a score indicator will be displayed when the item object is collected.
+			This is the score given as argument to the CreateItem() functions." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean display"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjItem_SetAutoCollectEnable">
+			<Overload descr="Sets whether the item will be pulled towards the player when the player moves past the point of auto-collection." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean enable"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjItem_SetDefinedMovePatternA1">
+			<Overload descr="Sets the movement type of the item object. Defaults to ITEM_MOVE_DOWN." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="const movementType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjItem_GetInfo">
+			<Overload descr="Returns information about item." retVal="free">
+				<Param name="real objectId"/>
+				<Param name="const infoType"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPlayer_AddIntersectionCircleA1">
+			<Overload descr="Creates a hitbox of specified radius for collision detection of the player object.
+			The graze area extends the specified radius around the hitbox (the true graze radius is the sum of the two).
+			The hitbox will remain valid for every frame once created.
+			Coordinates of hitbox center are set in relation to the player." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real hitboxRadius"/>
+				<Param name="real grazeRadius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPlayer_AddIntersectionCircleA2">
+			<Overload descr="Creates a grazebox of specified radius for the player object.
+			The grazebox will remain valid for every frame once created.
+			Coordinates of hitbox center are set in relation to the player." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real grazeRadius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjPlayer_ClearIntersection">
+			<Overload descr="Deletes the hitbox of the player object." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjCol_IsIntersected">
+			<Overload descr="Returns true if the specified object is currently intersecting with another object." retVal="boolean">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjCol_GetListOfIntersectedEnemyID">
+			<Overload descr="Returns an array of all enemy object IDs that the specified object is currently intersecting with." retVal="real[]">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjCol_GetIntersectedCount">
+			<Overload descr="Returns the number of times the specified object intersected with other objects during the previous frame.
+			For example, this can be used to determine how many player shots have collided with an enemy (similar to GetHitCountin v0.12m)." retVal="real">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CreatePlayerShotA1">
+			<Overload descr="The player fires the specified shot." retVal="real">
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real speed"/>
+				<Param name="real angle"/>
+				<Param name="real damage"/>
+				<Param name="real penetration"/>
+				<Param name="real graphicId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="CallSpell">
+			<Overload descr="If the conditions to use a spell card are met, uses the spell card." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadPlayerShotData">
+			<Overload descr="Loads the shot data image file.
+			If called several times, loads each file in succession.
+			A file cannot be loaded multiple times in a row." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ReloadPlayerShotData">
+			<Overload descr="Same as LoadPlayerShotData,
+			except a file can be loaded several times.
+			Can be used without loading through LoadPlayerShotData first." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetSpellManageObject">
+			<Overload descr="Retrieves the ID of the spell manage object.
+			It is necessary to delete this object using ObjDelete once the spell is over." retVal="real">
+				<Param name="string spellManageObject"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpell_Create">
+			<Overload descr="Creates a spell card object." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpell_Regist">
+			<Overload descr="Invokes the spell card object." retVal="void">
+				<Param name="real objectId"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpell_SetDamage">
+			<Overload descr="Sets the damage of the spell object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real damage"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpell_SetEraseShot">
+			<Overload descr="Determines whether the specified spell objects can delete enemy bullets.
+			Defaults to true." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="boolean erase"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpell_SetIntersectionCircle">
+			<Overload descr="Sets the hit circle for the spell object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real x"/>
+				<Param name="real y"/>
+				<Param name="real radius"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ObjSpell_SetIntersectionLine">
+			<Overload descr="Sets the hit line for the spell object." retVal="void">
+				<Param name="real objectId"/>
+				<Param name="real startX"/>
+				<Param name="real startY"/>
+				<Param name="real endX"/>
+				<Param name="real endY"/>
+				<Param name="real width"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetPauseScriptPath">
+			<Overload descr="Defines a script to be executed when the game is paused." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetEndSceneScriptPath">
+			<Overload descr="Defines the script that should be executed when the full game finishes." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetReplaySaveSceneScriptPath">
+			<Overload descr="Defines the script that should be executed when the player chooses to save a replay of the game." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetTransitionRenderTargetName">
+			<Overload descr="Specifically to be used by menu scripts such as the pause script.
+			This can be used to create a texture of the previous frame just before the game is paused.
+			This allows for effects to be applied such as fading to a blur." retVal="string"/>
+		</KeyWord>
+		<KeyWord func="yes" name="SetShotDeleteEventEnable">
+			<Overload descr="Sets whether the bullet deletion event is allowed to occur.
+			Event types are:
+			EV_DELETE_SHOT_IMMEDIATE: event will delete the shot immediately
+			EV_DELETE_SHOT_FADE: event will fade out the shot
+			Default is false for both event types." retVal="void">
+				<Param name="const eventType"/>
+				<Param name="boolean enableEvent"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="ClosePackage">
+			<Overload descr="Ends the package script." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="InitializeStageScene">
+			<Overload descr="Called only once before the start of a stage.
+			Calling performs the initial processing for the stage." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="FinalizeStageScene">
+			<Overload descr="Called only once at the end of a stage.
+			Calling ends the stage processing.
+			Defines the end point of replays" retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="StartStageScene">
+			<Overload descr="Starts the stage." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="SetStageIndex">
+			<Overload descr="Defines the index of the stage to be started next.
+			The value does not need to be sequential." retVal="void">
+				<Param name="real index"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetStageMainScript">
+			<Overload descr="Defines the stage to be started next." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetStagePlayerScript">
+			<Overload descr="Defines the player script to be used in the stage." retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetStageReplayFile">
+			<Overload descr="Can only be called after InitializeStageScene.
+			When this is called, the stage script will be run through once
+			with the replay controlling things such as player movement.
+			You don't have to start from the very first stage,
+			and you can start from the middle of a stage.(unsure)" retVal="void">
+				<Param name="string path"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetStageSceneState">
+			<Overload descr="Can be used to return status information about the currently running stage." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetStageSceneResult">
+			<Overload descr="Returns the reason the stage was finished." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="PauseStageScene">
+			<Overload descr="Pauses (or resumes) the stage script." retVal="void">
+				<Param name="boolean paused"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="TerminateStageScene">
+			<Overload descr="Exits out of the currently running stage." retVal="void"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetLoadFreePlayerScriptList">
+			<Overload descr="Loads a list of the player scripts available in the /script/player/folder." retVal="string[]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetFreePlayerScriptCount">
+			<Overload descr="Returns the number of player scripts available in the /script/player/folder." retVal="real"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetFreePlayerScriptInfo">
+			<Overload descr="Returns various information about the player script.
+			Index of the player script must be less than GetFreePlayerScriptCount." retVal="string">
+				<Param name="real index"/>
+				<Param name="const scriptInfo"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="LoadReplayList">
+			<Overload descr="Loads a list of the available replays for the current script." retVal="string[]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="GetValidReplayIndices">
+			<Overload descr="Loads a list of indices for the current script's available replays." retVal="real[]"/>
+		</KeyWord>
+		<KeyWord func="yes" name="IsValidReplayIndex">
+			<Overload descr="Returns true or false depending on the index chosen is valid to be used in GetReplayInfo." retVal="boolean">
+				<Param name="real index"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="GetReplayInfo">
+			<Overload descr="Returns the replay information requested.
+			The replay index must be less than GetValidReplayIndices." retVal="free">
+				<Param name="real index"/>
+				<Param name="const replayInfo"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetReplayInfo">
+			<Overload descr="Sets the replay information.
+			Curently only to be used with REPLAY_COMMENT." retVal="void">
+				<Param name="const replayInfoType"/>
+				<Param name="free info"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SaveReplay">
+			<Overload descr="Saves a replay to the specified replay index." retVal="void">
+				<Param name="real index"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord func="yes" name="SetShotDeleteEventEnable">
+			<Overload descr="Saves a replay to the specified replay index." retVal="void">
+				<Param name="real index"/>
+			</Overload>
+		</KeyWord>
+		<KeyWord name="DS_TABLET">
+			<Overload descr="Rod of Remorse (Kaigo no Bou)"/>
+		</KeyWord>
+		<KeyWord name="DS_JUDGMENT">
+			<Overload descr="Similar to Shikieiki's EX attack (TH09)"/>
+		</KeyWord>
+		<KeyWord name="DS_TENGU">
+			<Overload descr="Wind bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_RAINBOW">
+			<Overload descr="Rainbow laser"/>
+		</KeyWord>
+		<KeyWord name="DS_FIRE_RED">
+			<Overload descr="Fire bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_FIRE_BLUE">
+			<Overload descr="Blue fire bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_SS_RED">
+			<Overload descr="Super small red bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_RED">
+			<Overload descr="Small red bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_A_RED">
+			<Overload descr="Small red bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_RED">
+			<Overload descr="Bordered red bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_RED">
+			<Overload descr="Medium red bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_A_RED">
+			<Overload descr="Medium red bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_L_RED">
+			<Overload descr="Large red bubble"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_RED">
+			<Overload descr="Red needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_RED">
+			<Overload descr="Red rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_RED">
+			<Overload descr="Red ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_RED">
+			<Overload descr="Red suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_RED">
+			<Overload descr="Red oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_KUNAI_RED">
+			<Overload descr="Red kunai"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_RED">
+			<Overload descr="Red arrow"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_A_RED">
+			<Overload descr="Red arrow (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BILL_RED">
+			<Overload descr="Red amulet"/>
+		</KeyWord>
+		<KeyWord name="DS_COIN_RED">
+			<Overload descr="Red coin"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_RED">
+			<Overload descr="Glowing red bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_RED">
+			<Overload descr="Small red star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_RED">
+			<Overload descr="Medium red star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_RED">
+			<Overload descr="Red butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_YOUMU_RED">
+			<Overload descr="Small red sword"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_KOUMA_RED">
+			<Overload descr="Red knife"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_RED">
+			<Overload descr="Red laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_SS_ORANGE">
+			<Overload descr="Super small orange bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_ORANGE">
+			<Overload descr="Small orange bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_A_ORANGE">
+			<Overload descr="Small orange bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_ORANGE">
+			<Overload descr="Bordered orange bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_ORANGE">
+			<Overload descr="Medium orange bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_A_ORANGE">
+			<Overload descr="Medium orange bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_L_ORANGE">
+			<Overload descr="Large orange bubble"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_ORANGE">
+			<Overload descr="Orange needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_ORANGE">
+			<Overload descr="Orange rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_ORANGE">
+			<Overload descr="Orange ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_ORANGE">
+			<Overload descr="Orange suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_ORANGE">
+			<Overload descr="Orange oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_KUNAI_ORANGE">
+			<Overload descr="Orange kunai"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_ORANGE">
+			<Overload descr="Orange arrow"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_A_ORANGE">
+			<Overload descr="Orange arrow (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BILL_ORANGE">
+			<Overload descr="Orange amulet"/>
+		</KeyWord>
+		<KeyWord name="DS_COIN_ORANGE">
+			<Overload descr="Orange coin"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_ORANGE">
+			<Overload descr="Glowing orange bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_ORANGE">
+			<Overload descr="Small orange star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_ORANGE">
+			<Overload descr="Medium orange star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_ORANGE">
+			<Overload descr="Orange butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_YOUMU_ORANGE">
+			<Overload descr="Small orange sword"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_KOUMA_ORANGE">
+			<Overload descr="Orange knife"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_ORANGE">
+			<Overload descr="Orange laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_SS_YELLOW">
+			<Overload descr="Super small yellow bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_YELLOW">
+			<Overload descr="Small yellow bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_A_YELLOW">
+			<Overload descr="Small yellow bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_YELLOW">
+			<Overload descr="Bordered yellow bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_YELLOW">
+			<Overload descr="Medium yellow bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_A_YELLOW">
+			<Overload descr="Medium yellow bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_L_YELLOW">
+			<Overload descr="Large yellow bubble"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_YELLOW">
+			<Overload descr="Yellow needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_YELLOW">
+			<Overload descr="Yellow rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_YELLOW">
+			<Overload descr="Yellow ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_YELLOW">
+			<Overload descr="Yellow suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_YELLOW">
+			<Overload descr="Yellow oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_KUNAI_YELLOW">
+			<Overload descr="Yellow kunai"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_YELLOW">
+			<Overload descr="Yellow arrow"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_A_YELLOW">
+			<Overload descr="Yellow arrow (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BILL_YELLOW">
+			<Overload descr="Yellow amulet"/>
+		</KeyWord>
+		<KeyWord name="DS_COIN_YELLOW">
+			<Overload descr="Yellow coin"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_YELLOW">
+			<Overload descr="Glowing yellow bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_YELLOW">
+			<Overload descr="Small yellow star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_YELLOW">
+			<Overload descr="Medium yellow star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_YELLOW">
+			<Overload descr="Yellow butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_YOUMU_YELLOW">
+			<Overload descr="Small yellow sword"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_KOUMA_YELLOW">
+			<Overload descr="Yellow knife"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_YELLOW">
+			<Overload descr="Yellow laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_SS_GREEN">
+			<Overload descr="Super small green bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_GREEN">
+			<Overload descr="Small green bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_A_GREEN">
+			<Overload descr="Small green bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_GREEN">
+			<Overload descr="Bordered green bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_GREEN">
+			<Overload descr="Medium green bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_A_GREEN">
+			<Overload descr="Medium green bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_L_GREEN">
+			<Overload descr="Large green bubble"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_GREEN">
+			<Overload descr="Green needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_GREEN">
+			<Overload descr="Green rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_GREEN">
+			<Overload descr="Green ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_GREEN">
+			<Overload descr="Green suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_GREEN">
+			<Overload descr="Green oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_KUNAI_GREEN">
+			<Overload descr="Green kunai"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_GREEN">
+			<Overload descr="Green arrow"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_A_GREEN">
+			<Overload descr="Green arrow (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BILL_GREEN">
+			<Overload descr="Green amulet"/>
+		</KeyWord>
+		<KeyWord name="DS_COIN_GREEN">
+			<Overload descr="Green coin"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_GREEN">
+			<Overload descr="Glowing green bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_GREEN">
+			<Overload descr="Small green star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_GREEN">
+			<Overload descr="Medium green star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_GREEN">
+			<Overload descr="Green butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_YOUMU_GREEN">
+			<Overload descr="Small green sword"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_KOUMA_GREEN">
+			<Overload descr="Green knife"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_GREEN">
+			<Overload descr="Green laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_SS_SKY">
+			<Overload descr="Super small sky blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_SKY">
+			<Overload descr="Small sky blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_A_SKY">
+			<Overload descr="Small sky blue bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_SKY">
+			<Overload descr="Bordered sky blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_SKY">
+			<Overload descr="Medium sky blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_A_SKY">
+			<Overload descr="Medium sky blue bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_L_SKY">
+			<Overload descr="Large sky blue bubble"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_SKY">
+			<Overload descr="Sky blue needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_SKY">
+			<Overload descr="Sky blue rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_SKY">
+			<Overload descr="Sky blue ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_SKY">
+			<Overload descr="Sky blue suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_SKY">
+			<Overload descr="Sky blue oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_KUNAI_SKY">
+			<Overload descr="Sky blue kunai"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_SKY">
+			<Overload descr="Sky blue arrow"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_A_SKY">
+			<Overload descr="Sky blue arrow (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BILL_SKY">
+			<Overload descr="Sky blue amulet"/>
+		</KeyWord>
+		<KeyWord name="DS_COIN_SKY">
+			<Overload descr="Sky blue coin"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_SKY">
+			<Overload descr="Glowing sky bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_SKY">
+			<Overload descr="Small sky blue star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_SKY">
+			<Overload descr="Medium sky blue star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_SKY">
+			<Overload descr="Sky blue butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_YOUMU_SKY">
+			<Overload descr="Small sky blue sword"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_KOUMA_SKY">
+			<Overload descr="Sky blue knife"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_SKY">
+			<Overload descr="Sky blue laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_SS_BLUE">
+			<Overload descr="Super small blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_BLUE">
+			<Overload descr="Small blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_A_BLUE">
+			<Overload descr="Small blue bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_BLUE">
+			<Overload descr="Bordered blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_BLUE">
+			<Overload descr="Medium blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_A_BLUE">
+			<Overload descr="Medium blue bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_L_BLUE">
+			<Overload descr="Large blue bubble"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_BLUE">
+			<Overload descr="Blue needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_BLUE">
+			<Overload descr="Blue rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_BLUE">
+			<Overload descr="Blue ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_BLUE">
+			<Overload descr="Blue suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_BLUE">
+			<Overload descr="Blue oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_KUNAI_BLUE">
+			<Overload descr="Blue kunai"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_BLUE">
+			<Overload descr="Blue arrow"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_A_BLUE">
+			<Overload descr="Blue arrow (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BILL_BLUE">
+			<Overload descr="Blue amulet"/>
+		</KeyWord>
+		<KeyWord name="DS_COIN_BLUE">
+			<Overload descr="Blue coin"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_BLUE">
+			<Overload descr="Glowing blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_BLUE">
+			<Overload descr="Small blue star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_BLUE">
+			<Overload descr="Medium blue star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_BLUE">
+			<Overload descr="Blue butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_YOUMU_BLUE">
+			<Overload descr="Small blue sword"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_KOUMA_BLUE">
+			<Overload descr="Blue knife"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_BLUE">
+			<Overload descr="Blue laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_SS_PURPLE">
+			<Overload descr="Super small purple bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_PURPLE">
+			<Overload descr="Small purple bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_A_PURPLE">
+			<Overload descr="Small purple bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_PURPLE">
+			<Overload descr="Bordered purple bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_PURPLE">
+			<Overload descr="Medium purple bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_A_PURPLE">
+			<Overload descr="Medium purple bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_L_PURPLE">
+			<Overload descr="Large purple bubble"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_PURPLE">
+			<Overload descr="Purple needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_PURPLE">
+			<Overload descr="Purple rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_PURPLE">
+			<Overload descr="Purple ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_PURPLE">
+			<Overload descr="Purple suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_PURPLE">
+			<Overload descr="Purple oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_KUNAI_PURPLE">
+			<Overload descr="Purple kunai"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_PURPLE">
+			<Overload descr="Purple arrow"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_A_PURPLE">
+			<Overload descr="Purple arrow (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BILL_PURPLE">
+			<Overload descr="Purple amulet"/>
+		</KeyWord>
+		<KeyWord name="DS_COIN_PURPLE">
+			<Overload descr="Purple coin"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_PURPLE">
+			<Overload descr="Glowing purple bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_PURPLE">
+			<Overload descr="Small purple star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_PURPLE">
+			<Overload descr="Medium purple star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_PURPLE">
+			<Overload descr="Purple butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_YOUMU_PURPLE">
+			<Overload descr="Small purple sword"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_KOUMA_PURPLE">
+			<Overload descr="Purple knife"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_PURPLE">
+			<Overload descr="Purple laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_SS_WHITE">
+			<Overload descr="Super small white bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_WHITE">
+			<Overload descr="Small white bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_A_WHITE">
+			<Overload descr="Small white bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_WHITE">
+			<Overload descr="Bordered white bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_WHITE">
+			<Overload descr="Medium white bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_A_WHITE">
+			<Overload descr="Medium white bullet (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_L_WHITE">
+			<Overload descr="Large white bubble"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_WHITE">
+			<Overload descr="White needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_WHITE">
+			<Overload descr="White rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_WHITE">
+			<Overload descr="White ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_WHITE">
+			<Overload descr="White suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_WHITE">
+			<Overload descr="White oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_KUNAI_WHITE">
+			<Overload descr="White kunai"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_WHITE">
+			<Overload descr="White arrow"/>
+		</KeyWord>
+		<KeyWord name="DS_SCALE_A_WHITE">
+			<Overload descr="White arrow (Additive rendering)"/>
+		</KeyWord>
+		<KeyWord name="DS_BILL_WHITE">
+			<Overload descr="White amulet"/>
+		</KeyWord>
+		<KeyWord name="DS_COIN_WHITE">
+			<Overload descr="White coin"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_WHITE">
+			<Overload descr="Glowing white bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_WHITE">
+			<Overload descr="Small white star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_WHITE">
+			<Overload descr="Medium white star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_WHITE">
+			<Overload descr="White butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_YOUMU_WHITE">
+			<Overload descr="Small white sword"/>
+		</KeyWord>
+		<KeyWord name="DS_KNIFE_KOUMA_WHITE">
+			<Overload descr="White knife"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_WHITE">
+			<Overload descr="White laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_R_WHITE">
+			<Overload descr="Small inverted white bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_R_WHITE">
+			<Overload descr="Bordered inverted white bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_R_WHITE">
+			<Overload descr="Glowing inverted white bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_R_WHITE">
+			<Overload descr="Medium inverted white bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_R_WHITE">
+			<Overload descr="Inverted white needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_R_WHITE">
+			<Overload descr="Inverted white rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_R_WHITE">
+			<Overload descr="Inverted white ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_R_WHITE">
+			<Overload descr="Inverted white suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_R_WHITE">
+			<Overload descr="Inverted white oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_R_WHITE">
+			<Overload descr="Small inverted white star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_R_WHITE">
+			<Overload descr="Medium inverted white star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_R_WHITE">
+			<Overload descr="Inverted white butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_R_WHITE">
+			<Overload descr="Inverted white laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_R_RED">
+			<Overload descr="Small inverted red bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_R_RED">
+			<Overload descr="Bordered inverted red bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_R_RED">
+			<Overload descr="Glowing inverted red bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_R_RED">
+			<Overload descr="Medium inverted red bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_R_RED">
+			<Overload descr="Inverted red needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_R_RED">
+			<Overload descr="Inverted red rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_R_RED">
+			<Overload descr="Inverted red ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_R_RED">
+			<Overload descr="Inverted red suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_R_RED">
+			<Overload descr="Inverted red oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_R_RED">
+			<Overload descr="Small inverted red star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_R_RED">
+			<Overload descr="Medium inverted red star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_R_RED">
+			<Overload descr="Inverted red butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_R_RED">
+			<Overload descr="Inverted red laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_R_PURPLE">
+			<Overload descr="Small inverted purple bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_R_PURPLE">
+			<Overload descr="Bordered inverted purple bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_R_PURPLE">
+			<Overload descr="Glowing inverted purple bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_R_PURPLE">
+			<Overload descr="Medium inverted purple bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_R_PURPLE">
+			<Overload descr="Inverted purple needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_R_PURPLE">
+			<Overload descr="Inverted purple rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_R_PURPLE">
+			<Overload descr="Inverted purple ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_R_PURPLE">
+			<Overload descr="Inverted purple suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_R_PURPLE">
+			<Overload descr="Inverted purple oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_R_PURPLE">
+			<Overload descr="Small inverted purple star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_R_PURPLE">
+			<Overload descr="Medium inverted purple star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_R_PURPLE">
+			<Overload descr="Inverted purple butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_R_PURPLE">
+			<Overload descr="Inverted purple laser"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_S_R_BLUE">
+			<Overload descr="Small inverted blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_BS_R_BLUE">
+			<Overload descr="Bordered inverted blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_LIGHT_R_BLUE">
+			<Overload descr="Glowing inverted blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_BALL_M_R_BLUE">
+			<Overload descr="Medium inverted blue bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_NEEDLE_R_BLUE">
+			<Overload descr="Inverted blue needle"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_S_R_BLUE">
+			<Overload descr="Inverted blue rice grain"/>
+		</KeyWord>
+		<KeyWord name="DS_ICE_R_BLUE">
+			<Overload descr="Inverted blue ice shard"/>
+		</KeyWord>
+		<KeyWord name="DS_MISSILE_R_BLUE">
+			<Overload descr="Inverted blue suppository"/>
+		</KeyWord>
+		<KeyWord name="DS_RICE_M_R_BLUE">
+			<Overload descr="Inverted blue oval bullet"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_S_R_BLUE">
+			<Overload descr="Small inverted blue star"/>
+		</KeyWord>
+		<KeyWord name="DS_STAR_M_R_BLUE">
+			<Overload descr="Medium inverted blue star"/>
+		</KeyWord>
+		<KeyWord name="DS_BUTTERFLY_R_BLUE">
+			<Overload descr="Inverted blue butterfly"/>
+		</KeyWord>
+		<KeyWord name="DS_BEAM_R_BLUE">
+			<Overload descr="Inverted blue laser"/>
+		</KeyWord>
+		<KeyWord name="EV_REQUEST_LIFE">
+			<Overload descr="Requests for the boss's life, and will only be called in a boss script. It is necessary to return a real value using SetScriptResult. Ignoring the request will produce an error."/>
+		</KeyWord>
+		<KeyWord name="EV_REQUEST_TIMER">
+			<Overload descr="Requests for the boss timer, and will only be called in a boss script. It is necessary to return a real value using SetScriptResult. Ignoring this will cause the boss to have no time limit."/>
+		</KeyWord>
+		<KeyWord name="EV_REQUEST_IS_LAST_SPELL">
+			<Overload descr="Requests if the spell card is a last spell, and will only be called in a boss script. It is necessary to return a boolean value using SetScriptResult. Ignoring this will cause the spell to not be a last spell."/>
+		</KeyWord>
+		<KeyWord name="EV_REQUEST_IS_DURABLE_SPELL">
+			<Overload descr="Requests if the spell card is a survival spell card, and will only be called in a boss script. It is necessary to return a boolean value using SetScriptResult. Ignoring this will cause the spell to not be a survival spell."/>
+		</KeyWord>
+		<KeyWord name="EV_REQUEST_SPELL_SCORE">
+			<Overload descr="This will request for the spell card score, and will only be called in a boss script. It is necessary to return a boolean value using SetScriptResult. Ignoring this will set the spell card score to 0 points."/>
+		</KeyWord>
+		<KeyWord name="EV_TIMEOUT">
+			<Overload descr="Notification for when an enemy spell is timed out, and will notify all active scripts."/>
+		</KeyWord>
+		<KeyWord name="EV_START_BOSS_SPELL">
+			<Overload descr="Notification for the start of an enemy spell card, and will notify all active scripts."/>
+		</KeyWord>
+		<KeyWord name="EV_GAIN_SPELL">
+			<Overload descr="Notification for when a spellcard is captured, and will notify all active scripts."/>
+		</KeyWord>
+		<KeyWord name="EV_START_BOSS_STEP">
+			<Overload descr="Notification for the start of 1 step of the boss (The start of 1 Single script). This will notify all active scripts."/>
+		</KeyWord>
+		<KeyWord name="EV_END_BOSS_STEP">
+			<Overload descr="Notification for the end of 1 step of the boss (The end of 1 Single script). This will notify all active scripts."/>
+		</KeyWord>
+		<KeyWord name="EV_PLAYER_SHOOTDOWN">
+			<Overload descr="Notification when the player is shot down, and will notify all active scripts."/>
+		</KeyWord>
+		<KeyWord name="EV_PLAYER_SPELL">
+			<Overload descr="Notification for when a bomb is used, and will notify all active scripts."/>
+		</KeyWord>
+		<KeyWord name="EV_PLAYER_REBIRTH">
+			<Overload descr="Notification for when the player is revived, and will notify all active scripts."/>
+		</KeyWord>
+		<KeyWord name="EV_PAUSE_ENTER">
+			<Overload descr="Notification for when the game is paused, and will notify all active scripts. This event is used to stop the playing of audio. In this event, do not generate bullets, enemies, or use random numbers. Replays will be desyncronized if you do so."/>
+		</KeyWord>
+		<KeyWord name="EV_PAUSE_LEAVE">
+			<Overload descr="Notification for when the game is unpaused, and will notify all active scripts. This event is used to resume the playing of audio. In this event, do not generate bullets, enemies, or use random numbers. Replays will be desyncronized if you do so."/>
+		</KeyWord>
+		<KeyWord name="EV_REQUEST_SPELL">
+			<Overload descr="Requests if a bomb is possible, and will only be called in a player script. It is necessary to return a boolean value using SetScriptResult. Return true if a bomb may be used. If the request is ignored, then an error will be produced."/>
+		</KeyWord>
+		<KeyWord name="EV_GRAZE">
+			<Overload descr="Notification for when the player is grazing, and will only be called in a player script. This is used for producing the grazing effect and sfx."/>
+		</KeyWord>
+		<KeyWord name="EV_HIT">
+			<Overload descr="Notification when [the player] shot down, and will only be called in a player script. This is used for producing the explosion effects and sfx."/>
+		</KeyWord>
+		<KeyWord name="EV_GET_ITEM">
+			<Overload descr="Notification for when an item is collected, and will only be called in a player script. GetEventArgument(0) is used to check what item was collected."/>
+		</KeyWord>
+		<KeyWord name="EV_DELETE_SHOT_TO_ITEM">
+			<Overload descr="Notification for when a bullet is itemized, and will only be called in an item script. GetEventArgument(1) will return the bullet's coordinates (real array, [x, y])."/>
+		</KeyWord>
+		<KeyWord name="ITEM_1UP">
+			<Overload descr="Life item"/>
+		</KeyWord>
+		<KeyWord name="ITEM_1UP_S">
+			<Overload descr="Life part"/>
+		</KeyWord>
+		<KeyWord name="ITEM_POINT">
+			<Overload descr="Point item"/>
+		</KeyWord>
+		<KeyWord name="ITEM_POINT_S">
+			<Overload descr="Small point item"/>
+		</KeyWord>
+		<KeyWord name="ITEM_USER">
+			<Overload descr="User defined item"/>
+		</KeyWord>
+		<KeyWord name="ITEM_POWER">
+			<Overload descr="Power up item"/>
+		</KeyWord>
+		<KeyWord name="ITEM_POWER_S">
+			<Overload descr="Small power up item "/>
+		</KeyWord>
+		<KeyWord name="ITEM_SPELL">
+			<Overload descr="Bomb item"/>
+		</KeyWord>
+		<KeyWord name="ITEM_SPELL_S">
+			<Overload descr="Small bomb item "/>
+		</KeyWord>
+		<KeyWord name="OBJ_ENEMY">
+			<Overload descr="Enemy"/>
+		</KeyWord>
+		<KeyWord name="OBJ_ENEMY_BOSS">
+			<Overload descr="Boss"/>
+		</KeyWord>
+		<KeyWord name="OBJ_SHOT">
+			<Overload descr="Generic bullet"/>
+		</KeyWord>
+		<KeyWord name="OBJ_LOOSE_LASER">
+			<Overload descr="Loose laser"/>
+		</KeyWord>
+		<KeyWord name="OBJ_STRAIGHT_LASER">
+			<Overload descr="Straight laser"/>
+		</KeyWord>
+		<KeyWord name="OBJ_CURVE_LASER">
+			<Overload descr="Curved laser"/>
+		</KeyWord>
+		<KeyWord name="INFO_LIFE">
+			<Overload descr="Life points of the enemy (real)"/>
+		</KeyWord>
+		<KeyWord name="INFO_DAMAGE_RATE_SHOT">
+			<Overload descr="Damage rate percentage of normal player shots set by ObjEnemy_SetDamageRate (real: 1-100)"/>
+		</KeyWord>
+		<KeyWord name="INFO_DAMAGE_RATE_SPELL">
+			<Overload descr="Damage rate percentage of player bombs set by ObjEnemy_SetDamageRate (real: 1-100)"/>
+		</KeyWord>
+		<KeyWord name="INFO_SHOT_HIT_COUNT">
+			<Overload descr="Amount of times the enemy was hit by player bullets in the previous frame"/>
+		</KeyWord>
+		<KeyWord name="INFO_SCRIPT_TYPE">
+			<Overload descr="Returns the script type (TYPE_SCRIPT_* constant)"/>
+		</KeyWord>
+		<KeyWord name="INFO_SCRIPT_PATH">
+			<Overload descr="Returns the script path (char)"/>
+		</KeyWord>
+		<KeyWord name="INFO_SCRIPT_ID">
+			<Overload descr="Returns the script #ID (char)"/>
+		</KeyWord>
+		<KeyWord name="INFO_SCRIPT_TITLE">
+			<Overload descr="Returns the script #Title (char)"/>
+		</KeyWord>
+		<KeyWord name="INFO_SCRIPT_TEXT">
+			<Overload descr="Returns the script #Text (char)"/>
+		</KeyWord>
+		<KeyWord name="INFO_SCRIPT_IMAGE">
+			<Overload descr="Returns the script #Image (char)"/>
+		</KeyWord>
+		<KeyWord name="INFO_SCRIPT_REPLAY_NAME">
+			<Overload descr="Returns the script #ReplayName (char)"/>
+		</KeyWord>
+		<KeyWord name="STATE_NORMAL">
+			<Overload descr="The player is alive"/>
+		</KeyWord>
+		<KeyWord name="STATE_HIT">
+			<Overload descr="The player has been hit"/>
+		</KeyWord>
+		<KeyWord name="STATE_DOWN">
+			<Overload descr="After being killed, before reappearing"/>
+		</KeyWord>
+		<KeyWord name="STATE_END">
+			<Overload descr="The amount of remaining lives has become 0 (game over)"/>
+		</KeyWord>
+		<KeyWord name="TYPE_ALL">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="TYPE_SHOT">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="TYPE_CHILD">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="TYPE_IMMEDIATE">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="TYPE_FADE">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="TYPE_ITEM">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="TARGET_ALL">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="TARGET_ENEMY">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="TARGET_PLAYER">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="INFO_RECT">
+			<Overload descr="Coordinate rect list. Returns real array: [left, top, right, bottom]"/>
+		</KeyWord>
+		<KeyWord name="INFO_DELAY_COLOR">
+			<Overload descr="Delay color RGB list. Returns real array: [red, green, blue]"/>
+		</KeyWord>
+		<KeyWord name="INFO_BLEND">
+			<Overload descr="Blending type. Returns real. can be BLEND_ALPHA, BLEND_ADD_RGB, or BLEND_ADD_ARGB"/>
+		</KeyWord>
+		<KeyWord name="INFO_COLLISION">
+			<Overload descr="Radius of collision detection. Returns real,"/>
+		</KeyWord>
+		<KeyWord name="INFO_COLLISION_LIST">
+			<Overload descr="List of collision hitbox radii and coordinates. Returns real two-dimensional array: [radius, x, y]"/>
+		</KeyWord>
+		<KeyWord name="BLEND_ALPHA">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="BLEND_ADD_RGB">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="BLEND_MULTIPLY">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="BLEND_SUBTRACT">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="BLEND_ADD_ARGB">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="BLEND_INV_DESTRGB">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="OBJ_PRIMITIVE_2D">
+			<Overload descr="Primitive (triangle) in the 2D space"/>
+		</KeyWord>
+		<KeyWord name="OBJ_SPRITE_2D">
+			<Overload descr="Rectangle in the 2D space (usable by the ObjSprite2D_ functions)"/>
+		</KeyWord>
+		<KeyWord name="OBJ_SPRITE_LIST_2D">
+			<Overload descr="List of rectangles in the 2D space (usable by the ObjSpriteList2D_ functions)"/>
+		</KeyWord>
+		<KeyWord name="OBJ_PRIMITIVE_3D">
+			<Overload descr="Primitive (triangle) in the 3D space"/>
+		</KeyWord>
+		<KeyWord name="OBJ_SPRITE_3D">
+			<Overload descr="Rectangle in the 3D space (usable by the ObjSprite3D_ functions)"/>
+		</KeyWord>
+		<KeyWord name="PRIMITIVE_TRIANGLELIST">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="PRIMITIVE_TRIANGLESTRIP">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="PRIMITIVE_TRIANGLEFAN">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="PRIMITIVE_LINELIST">
+			<Overload descr="Undocumented"/>
+		</KeyWord>
+		<KeyWord name="PRIMITIVE_LINESTRIP">
+			<Overload descr="Undocumented"/>
+		</KeyWord>
+		<KeyWord name="PRIMITIVE_POINT_LIST">
+			<Overload descr="Undocumented"/>
+		</KeyWord>
+		<KeyWord name="ALIGNMENT_LEFT">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="ALIGNMENT_CENTER">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="ALIGNMENT_RIGHT">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="SOUND_BGM">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="SOUND_SE">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="OBJ_FILE_TEXT">
+			<Overload descr="A text file"/>
+		</KeyWord>
+		<KeyWord name="OBJ_FILE_BINARY">
+			<Overload descr="A binary file"/>
+		</KeyWord>
+		<KeyWord name="ENDIAN_LITTLE">
+			<Overload descr="Little endian (default)"/>
+		</KeyWord>
+		<KeyWord name="ENDIAN_BIG">
+			<Overload descr="Big endian"/>
+		</KeyWord>
+		<KeyWord name="CODE_ACP">
+			<Overload descr="ANSI/Shift-JIS"/>
+		</KeyWord>
+		<KeyWord name="CODE_UTF8">
+			<Overload descr="UTF8"/>
+		</KeyWord>
+		<KeyWord name="CODE_UTF16LE">
+			<Overload descr="UTF16 LE"/>
+		</KeyWord>
+		<KeyWord name="CODE_UTF16BE">
+			<Overload descr="UTF16 BE"/>
+		</KeyWord>
+		<KeyWord name="INFO_IS_SPELL">
+			<Overload descr="Returns true if a spell card is active."/>
+		</KeyWord>
+		<KeyWord name="INFO_IS_LAST_SPELL">
+			<Overload descr="Returns true if the Last Spell is active."/>
+		</KeyWord>
+		<KeyWord name="INFO_IS_DURABLE_SPELL">
+			<Overload descr="Returns true in the case of a survival spell."/>
+		</KeyWord>
+		<KeyWord name="INFO_IS_LAST_STEP">
+			<Overload descr="Returns true when the last spell is active."/>
+		</KeyWord>
+		<KeyWord name="INFO_TIMER">
+			<Overload descr="Returns the timer value in seconds."/>
+		</KeyWord>
+		<KeyWord name="INFO_TIMERF">
+			<Overload descr="Returns the timer value in frames (returns -1 if unlimited)."/>
+		</KeyWord>
+		<KeyWord name="INFO_ORGTIMERF">
+			<Overload descr="Returns the original timer value in frames (returns -1 if unlimited)."/>
+		</KeyWord>
+		<KeyWord name="INFO_SPELL_SCORE">
+			<Overload descr="Returns the score of the spell card."/>
+		</KeyWord>
+		<KeyWord name="INFO_REMAIN_STEP_COUNT">
+			<Overload descr="Returns the number of steps remaining in the active boss scene."/>
+		</KeyWord>
+		<KeyWord name="INFO_ACTIVE_STEP_LIFE_COUNT">
+			<Overload descr="Returns the amount of attacks of the enemy for the active step."/>
+		</KeyWord>
+		<KeyWord name="INFO_ACTIVE_STEP_TOTAL_MAX_LIFE">
+			<Overload descr="Returns the initial life of the enemy for the active step."/>
+		</KeyWord>
+		<KeyWord name="INFO_ACTIVE_STEP_TOTAL_LIFE">
+			<Overload descr="Returns the total remaining life for the active step."/>
+		</KeyWord>
+		<KeyWord name="INFO_PLAYER_SHOOTDOWN_COUNT">
+			<Overload descr="Returns the amount of times the player died during the spell."/>
+		</KeyWord>
+		<KeyWord name="INFO_PLAYER_SPELL_COUNT">
+			<Overload descr="Returns the amount of times the player bombed during the spell."/>
+		</KeyWord>
+		<KeyWord name="INFO_ACTIVE_STEP_LIFE_RATE_LIST">
+			<Overload descr="Returns an array containing the proportion (0-1) of each attacks's amount of life in the active step."/>
+		</KeyWord>
+		<KeyWord name="INFO_CURRENT_LIFE">
+			<Overload descr="Returns the current life of the enemy in the current attack."/>
+		</KeyWord>
+		<KeyWord name="INFO_CURRENT_LIFE_MAX">
+			<Overload descr="Returns the maximum life of the enemy in the current attack."/>
+		</KeyWord>
+		<KeyWord name="ITEM_MOVE_DOWN">
+			<Overload descr="Pops upward, then drops down"/>
+		</KeyWord>
+		<KeyWord name="ITEM_MOVE_TOPLAYER">
+			<Overload descr="Automatically flies towards the player"/>
+		</KeyWord>
+		<KeyWord name="INFO_ITEM_SCORE">
+			<Overload descr="Returns the score value of the item object (real)."/>
+		</KeyWord>
+		<KeyWord name="TYPE_SCRIPT_ALL">
+			<Overload descr="All scripts"/>
+		</KeyWord>
+		<KeyWord name="TYPE_SCRIPT_PLAYER">
+			<Overload descr="Player scripts"/>
+		</KeyWord>
+		<KeyWord name="TYPE_SCRIPT_SINGLE">
+			<Overload descr="Single scripts"/>
+		</KeyWord>
+		<KeyWord name="TYPE_SCRIPT_PLURAL">
+			<Overload descr="Plural scripts"/>
+		</KeyWord>
+		<KeyWord name="TYPE_SCRIPT_STAGE">
+			<Overload descr="Stage scripts"/>
+		</KeyWord>
+		<KeyWord name="TYPE_SCRIPT_PACKAGE">
+			<Overload descr="Package scripts"/>
+		</KeyWord>
+		<KeyWord name="KEY_FREE">
+			<Overload descr="The key is not pressed"/>
+		</KeyWord>
+		<KeyWord name="KEY_PUSH">
+			<Overload descr="The key has been pressed"/>
+		</KeyWord>
+		<KeyWord name="KEY_HOLD">
+			<Overload descr="The key is being held"/>
+		</KeyWord>
+		<KeyWord name="KEY_PULL">
+			<Overload descr="The key has been released"/>
+		</KeyWord>
+		<KeyWord name="VK_LEFT">
+			<Overload descr="Move left"/>
+		</KeyWord>
+		<KeyWord name="VK_RIGHT">
+			<Overload descr="Move right"/>
+		</KeyWord>
+		<KeyWord name="VK_UP">
+			<Overload descr="Move up"/>
+		</KeyWord>
+		<KeyWord name="VK_DOWN">
+			<Overload descr="Move down"/>
+		</KeyWord>
+		<KeyWord name="VK_SHOT">
+			<Overload descr="Shot"/>
+		</KeyWord>
+		<KeyWord name="VK_BOMB">
+			<Overload descr="Bomb"/>
+		</KeyWord>
+		<KeyWord name="VK_SLOWMOVE">
+			<Overload descr="Focus"/>
+		</KeyWord>
+		<KeyWord name="VK_USER1">
+			<Overload descr="User key 1"/>
+		</KeyWord>
+		<KeyWord name="VK_USER2">
+			<Overload descr="User key 2"/>
+		</KeyWord>
+		<KeyWord name="VK_OK">
+			<Overload descr="Confirm"/>
+		</KeyWord>
+		<KeyWord name="VK_CANCEL">
+			<Overload descr="Cancel"/>
+		</KeyWord>
+		<KeyWord name="KEY_1">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_2">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_3">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_4">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_5">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_6">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_7">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_8">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_9">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_A">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_B">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_C">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_D">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_E">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_G">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_H">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_I">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_J">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_K">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_L">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_M">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_N">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_O">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_P">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_Q">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_R">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_S">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_T">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_U">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_V">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_W">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_X">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_Y">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_Z">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F1">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F2">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F3">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F4">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F5">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F6">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F7">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F8">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F9">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_F10">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_MINUS">
+			<Overload descr="-"/>
+		</KeyWord>
+		<KeyWord name="KEY_EQUALS">
+			<Overload descr="="/>
+		</KeyWord>
+		<KeyWord name="KEY_SLASH">
+			<Overload descr="/"/>
+		</KeyWord>
+		<KeyWord name="KEY_BACK">
+			<Overload descr="Backspace"/>
+		</KeyWord>
+		<KeyWord name="KEY_TAB">
+			<Overload descr="Tab"/>
+		</KeyWord>
+		<KeyWord name="KEY_SPACE">
+			<Overload descr="Space"/>
+		</KeyWord>
+		<KeyWord name="KEY_LBRACKET">
+			<Overload descr="["/>
+		</KeyWord>
+		<KeyWord name="KEY_RBRACKET">
+			<Overload descr="]"/>
+		</KeyWord>
+		<KeyWord name="KEY_SEMICOLON">
+			<Overload descr=";"/>
+		</KeyWord>
+		<KeyWord name="KEY_APOSTROPHE">
+			<Overload descr="'"/>
+		</KeyWord>
+		<KeyWord name="KEY_GRAVE">
+			<Overload descr="`"/>
+		</KeyWord>
+		<KeyWord name="KEY_BACKSLASH">
+			<Overload descr="\"/>
+		</KeyWord>
+		<KeyWord name="KEY_AT">
+			<Overload descr="@"/>
+		</KeyWord>
+		<KeyWord name="KEY_COLON">
+			<Overload descr=":"/>
+		</KeyWord>
+		<KeyWord name="KEY_UNDERLINE">
+			<Overload descr="_"/>
+		</KeyWord>
+		<KeyWord name="KEY_CIRCUMFLEX">
+			<Overload descr="^"/>
+		</KeyWord>
+		<KeyWord name="KEY_COMMA">
+			<Overload descr=","/>
+		</KeyWord>
+		<KeyWord name="KEY_PERIOD">
+			<Overload descr="."/>
+		</KeyWord>
+		<KeyWord name="KEY_YEN">
+			<Overload descr="\"/>
+		</KeyWord>
+		<KeyWord name="KEY_INSERT">
+			<Overload descr="Insert"/>
+		</KeyWord>
+		<KeyWord name="KEY_DELETE">
+			<Overload descr="Delete"/>
+		</KeyWord>
+		<KeyWord name="KEY_RETURN">
+			<Overload descr="Enter"/>
+		</KeyWord>
+		<KeyWord name="KEY_LCONTROL">
+			<Overload descr="Left Ctrl key"/>
+		</KeyWord>
+		<KeyWord name="KEY_RCONTROL">
+			<Overload descr="Right Ctrl key"/>
+		</KeyWord>
+		<KeyWord name="KEY_LSHIFT">
+			<Overload descr="Left Shift"/>
+		</KeyWord>
+		<KeyWord name="KEY_RSHIFT">
+			<Overload descr="Right Shift"/>
+		</KeyWord>
+		<KeyWord name="KEY_LEFT">
+			<Overload descr="Left Arrow Key"/>
+		</KeyWord>
+		<KeyWord name="KEY_RIGHT">
+			<Overload descr="Right Arrow Key"/>
+		</KeyWord>
+		<KeyWord name="KEY_UP">
+			<Overload descr="Up Arrow Key"/>
+		</KeyWord>
+		<KeyWord name="KEY_DOWN">
+			<Overload descr="Down Arrow Key"/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD0">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD1">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD2">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD3">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD4">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD5">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD6">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD7">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD8">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPAD9">
+			<Overload descr=""/>
+		</KeyWord>
+		<KeyWord name="KEY_ADD">
+			<Overload descr="Number Pad +"/>
+		</KeyWord>
+		<KeyWord name="KEY_SUBTRACT">
+			<Overload descr="Number Pad -"/>
+		</KeyWord>
+		<KeyWord name="KEY_MULTIPLY">
+			<Overload descr="Number Pad *"/>
+		</KeyWord>
+		<KeyWord name="KEY_DIVIDE">
+			<Overload descr="Number Pad /"/>
+		</KeyWord>
+		<KeyWord name="KEY_DECIMAL">
+			<Overload descr="Number Pad ."/>
+		</KeyWord>
+		<KeyWord name="KEY_NUMPADEQUALS">
+			<Overload descr="Number Pad ="/>
+		</KeyWord>
+		<KeyWord name="MOUSE_LEFT">
+			<Overload descr="Left Mouse Button"/>
+		</KeyWord>
+		<KeyWord name="MOUSE_MIDDLE">
+			<Overload descr="Middle Mouse Button"/>
+		</KeyWord>
+		<KeyWord name="MOUSE_RIGHT">
+			<Overload descr="RightMouse Button"/>
+		</KeyWord>
+		<KeyWord name="BORDER_NONE">
+			<Overload descr="No border"/>
+		</KeyWord>
+		<KeyWord name="BORDER_FULL">
+			<Overload descr="Full border"/>
+		</KeyWord>
+		<KeyWord name="BORDER_SHADOW">
+			<Overload descr="Shadow at the bottom right of the text"/>
+		</KeyWord>
+		<KeyWord name="STAGE_RESULT_CLEARED">
+			<Overload descr="Stage was cleared"/>
+		</KeyWord>
+		<KeyWord name="STAGE_RESULT_PLAYER_DOWN">
+			<Overload descr="Ran out of lives"/>
+		</KeyWord>
+		<KeyWord name="STAGE_RESULT_BREAK_OFF">
+			<Overload descr="Ended prematurely"/>
+		</KeyWord>
+		<KeyWord name="STAGE_STATE_FINISHED">
+			<Overload descr="Whether the stage is finished or not"/>
+		</KeyWord>
+		<KeyWord name="REPLAY_FILE_PATH">
+			<Overload descr="Replay's file path"/>
+		</KeyWord>
+		<KeyWord name="REPLAY_DATE_TIME">
+			<Overload descr="The date and time at which the replay was saved"/>
+		</KeyWord>
+		<KeyWord name="REPLAY_USER_NAME">
+			<Overload descr="The player's name"/>
+		</KeyWord>
+		<KeyWord name="REPLAY_FPS_AVERAGE">
+			<Overload descr="Average framerate"/>
+		</KeyWord>
+		<KeyWord name="REPLAY_PLAYER_NAME">
+			<Overload descr="The (abbreviated) name of the player script used"/>
+		</KeyWord>
+		<KeyWord name="REPLAY_STAGE_INDEX_LIST">
+			<Overload descr="List of stage indices that the replay used"/>
+		</KeyWord>
+		<KeyWord name="REPLAY_STAGE_START_SCORE_LIST">
+			<Overload descr="List of score indices at the start of each stage.
+		(the order of the stage indices is from REPLAY_STAGE_INDEX_LIST)"/>
+		</KeyWord>
+		<KeyWord name="REPLAY_STAGE_LAST_SCORE_LIST">
+			<Overload descr="Whether the stage is finished or not.
+		(the order of the stage indices is from REPLAY_STAGE_INDEX_LIST)"/>
+		</KeyWord>
+		<KeyWord name="REPLAY_COMMENT">
+			<Overload descr="A short comment set arbitrarily using SetReplayInfo"/>
+		</KeyWord>
+	<KeyWord name="EV_DELETE_SHOT_IMMEDIATE">
+		<Overload descr="Event will delete the shot immediately"/>
+	</KeyWord>
+	<KeyWord name="EV_DELETE_SHOT_FADE">
+		<Overload descr="Event will fade out the shot"/>
+	</KeyWord>
+	<KeyWord name="EV_USER_SYSTEM"/>
+	<KeyWord name="EV_USER_STAGE"/>
+	<KeyWord name="EV_USER_PLAYER"/>
+	<KeyWord name="EV_USER_PACKAGE"/>
+	<KeyWord name="EV_USER"/>
+	<KeyWord name="NO_CHANGE"/>
+	</AutoComplete>
+</NotepadPlus>
