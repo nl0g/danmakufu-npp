@@ -6,11 +6,15 @@ Set of Notepad++ plugins for Touhou Danmakufu ph3 (東方弾幕風) scripting la
 - Default and Bespin color themes
 - Code completion for ph3 engine library functions and constants 
 - Calltip function documentation
+
 ![Alt text](/screenshot/dmf-auto.png?raw=true "Autocomplete")
+![Alt text](/screenshot/dmf-doc.png?raw=true "Calltip")
+![Alt text](/screenshot/dmf-default.png?raw=true "Default theme")
+![Alt text](/screenshot/dmf-bespin.png?raw=true "Bespin theme")
 
 ##Installation
 To install autocomplete config copy Danmakufu.ph3.xml to your Nodepad++ installation directory \plugins\APIs.
 
-To install syntax highlighting go to Language → Define your language... press Import button and select the xml file.
+To install syntax highlighting go to Language → Define your language..., press Import... button and select the xml file.
 
 For default theme use dmf.default.xml, and for Bespin theme use dmf.bespin.xml.
