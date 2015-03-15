@@ -1,6 +1,6 @@
 # Notepad++ plugins for Touhou Danmakufu ph3
 ##Description
-Set of Notepad++ plugins for Touhou Danmakufu ph3 (東方弾幕風) scripting language. Includes autocomplete config and syntax highlighting configs.
+Set of Notepad++ plugins for Touhou Danmakufu ph3 (東方弾幕風) scripting language. Includes auto completion config and syntax highlighting configs.
 ##Features
 - Syntax highlighting for Danmakufu ph3 scripts (.dnh)
 - Default and Bespin color themes
@@ -13,8 +13,15 @@ Set of Notepad++ plugins for Touhou Danmakufu ph3 (東方弾幕風) scripting la
 ![Alt text](/screenshot/dmf-bespin.png?raw=true "Bespin theme")
 
 ##Installation
-To install autocomplete config copy Danmakufu.ph3.xml to your Nodepad++ installation directory \plugins\APIs.
+To install auto completion config copy Danmakufu.ph3.xml to your Nodepad++ installation directory \plugins\APIs.
+To enable auto completion go to Settings → Preferences... → Auto-Completion and select "Function completion" or "Function and word completion". For calltips check "Function parameters hint on input".
 
 To install syntax highlighting go to Language → Define your language..., press Import... button and select the xml file.
 
 For default theme use dmf.default.xml, and for Bespin theme use dmf.bespin.xml.
+
+##Known limitations
+- Windows-1252 encoding used for calltip documentation. Not sure but this seems to be Notepad++ limitation (utf-8 config doesn't work).
+- Autocomplete window doesn't appear when a calltip is shown. Notepad++ limitation.
+- Calltips only work for function and not for constants. Scintilla limitation.
+- Cannot change calltip background or text color. Scintilla limitation.
