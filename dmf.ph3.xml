@@ -4805,6 +4805,9 @@
 		<KeyWord name="KEY_NUMPADEQUALS">
 			<Overload descr="Number Pad ="/>
 		</KeyWord>
+		<KeyWord name="KEY_INVALID">
+			<Overload descr="Invalid key"/>
+		</KeyWord>
 		<KeyWord name="MOUSE_LEFT">
 			<Overload descr="Left Mouse Button"/>
 		</KeyWord>

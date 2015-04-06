@@ -2144,6 +2144,9 @@
 		<KeyWord name="KEY_INSERT">
 			<Overload descr="Insert"/>
 		</KeyWord>
+		<KeyWord name="KEY_INVALID">
+			<Overload descr="Invalid key"/>
+		</KeyWord>
 		<KeyWord name="KEY_J">
 			<Overload descr=""/>
 		</KeyWord>
